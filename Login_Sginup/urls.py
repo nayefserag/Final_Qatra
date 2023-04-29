@@ -22,6 +22,8 @@ urlpatterns = [
     path('login/',views.LoginView.as_view(template_name='login.html'), name='login'),
     path('SignUp/',Sginup, name='SignUp'),
     path('yourprofile/',profile,name='profile'),
+    path('Edit_Your_Profile/',profileedited , name='profileedited'),
+
     path('logout/', views.LogoutView.as_view(template_name='Sginin/logout.html'), name='logout'),
     path('password-reset/',views.PasswordResetView.as_view(template_name='forget_password_1.html'), name='password_reset'),
     path('password-reset/done/', views.PasswordResetDoneView.as_view(template_name='forget_password_2.html'), name='password_reset_done'),

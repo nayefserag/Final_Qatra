@@ -1,7 +1,7 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm , PasswordResetForm
+from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth.models import User
-
+from django.core.validators import RegexValidator   
 
 
 CHOICES1 = (('ذكر','ذكر'),
@@ -19,8 +19,10 @@ CHOICES3 = (('نعم','نعم'),
             ('لا','لا'))
 class UserRegistrationForm(UserCreationForm):
     # username = forms.CharField(max_length=101,label='الاسم بالكامل')
-    email = forms.EmailField(label='البريد الالكتروني')
-    phone = forms.IntegerField(label='رقم الهاتف')
+    email = forms.EmailField()
+    phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    phone = forms.CharField(max_length=20,validators=[phone_regex],label='rrrrrrrrrرقم الهاتف')
+
     # age = forms.IntegerField( required=True,label='العمر')
     # identity = forms.CharField(max_length=101,label='رقم الهويه')
     # gender = forms.ChoiceField(choices=CHOICES1, required=True,label='النوع')
@@ -31,11 +33,13 @@ class UserRegistrationForm(UserCreationForm):
     class Meta:
         model = User
         fields = [ 'username','email','phone', 'password1', 'password2']
+
         labels = {
             'username'  :'الاسم بالكامل',
             'password1' : 'كلمة المرور',
             'password2' : 'تأكيد كلمة المرور',
             'email':'البريد الالكتروني',
+            'phone':' الهاتف',
         } 
 
         
@@ -44,7 +48,3 @@ class UserRegistrationForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         for k, v in self.Meta.labels.items():
             self[k].label = v
-# class Reset(PasswordResetForm):
-#     def __init__(self,*args,**kwargs):
-#         super(Reset,self).__init__(*args,**kwargs)
-#     email = forms.EmailField(label='البريد الالكتروني')

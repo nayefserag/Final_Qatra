@@ -87,52 +87,37 @@
                             <i class="fa-solid fa-user"></i>
                             <label>الاسم :  </label>
                     </div>
-                       {{ form.username.value }}
+                        <input class="input-form" type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" value="{{ form.username.value|default:'' }}" >
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-lock"></i>
                             <label>كلمه السر :</label>
                         </div>
-                        <p>**************</p>
-                        {% comment %} <input type="text" name="" id=""> {% endcomment %}
+                           {{ form.phone.value}}
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-phone-volume"></i>
                             <label>رقم الهاتف :</label>
                         </div>
-                        {% comment %} <input class="input-form" type="text" name="{{ form.phone.name }}" id="{{ form.phone.id_for_label }}" value="{{ form.phone.value|default:'' }}" > {% endcomment %}
-                        {{ form.phone.value}}
-                        {% comment %} <input type="tel" name="" id=""> {% endcomment %}
+                        <input class="input-form" type="tel" name="{{ form.phone.name }}" id="{{ form.phone.id_for_label }}" value="{{ form.phone.value|default:'' }}" >
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-envelope"></i>
                             <label>البريد الالكتروني :</label>
                         </div>
-                       {{ form.email.value }}
-                        {% comment %} <input type="email" name="" id=""> {% endcomment %}
+                        <input class="input-form" type="text" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value|default:'' }}" >
                     </div>
-
-
-
-
-                    {% comment %}
-                    <div class="col-lg-12 col-md-12 col-sm-12 box">
+                    {% comment %} <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-droplet"></i>
                             <label>الفصيله : </label>
                         </div>
                         <input type="text" name="" id="">
-                    </div> 
-                    {% endcomment %}
-
-
-
-
-
-                    <button class="submit_btn save-changes" type="submit" > <a href="{% url 'profileedited' %}" >تعديل البيانات </a></button>  
+                    </div> {% endcomment %}
+                    <button class="submit_btn save-changes" type="submit">حفظ التغيرات</button>  
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 profile-photo text-center">
                     <h4>الصورة الشخصية </h4>
