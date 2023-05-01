@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # QATRA 🩸
 
@@ -48,3 +49,6 @@ If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 ![Logo](https://photos.app.goo.gl/JA5aKeygMuw6dChQA)
 
+=======
+# Final_Qatra
+>>>>>>> 19dafdf1e1a4953fd9eceb79e249f0a70ae82307
