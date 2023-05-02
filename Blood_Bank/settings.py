@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ycrd$#1e#n1bg$#^e#(_@x9_3xpt(@1kux6qfc7p3$i*^5s%d9'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -97,11 +101,11 @@ WSGI_APPLICATION = 'Blood_Bank.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db',
-        'USER': 'root',
-        'PASSWORD': 'nayf',
-        'HOST':'localhost', #127.0.0.1
-        'PORT':'3306',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get("DB_USER"),
+        'PASSWORD': os.environ.get("DB_PASSWORD"),
+        'HOST': os.environ.get("DB_HOST"),
+        'PORT': os.environ.get("DB_PORT"),
     }
 }
 
@@ -192,38 +196,17 @@ SOCIALACCOUNT_LOGIN_ON_GET= True #this to skip confirmation page
 # Reset Password
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_mail")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'qatra2023@gmail.com'
-EMAIL_HOST_PASSWORD = 'tektfrqnekanzvrc'
-# DEFAULT_FROM_EMAIL = 'qatra2023@gmail.com'
-# EMAIL_HOST_USER = 'nayefserag@gmail.com'
-# EMAIL_HOST_PASSWORD = 'gyjpcecsuogtssnv'
+EMAIL_HOST = os.environ.get("EMAIL_HOST")
+EMAIL_PORT = os.environ.get("EMAIL_PORT")
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '366188022818-jl6ge8b3gpqp93ah61ol51isedd5sba2.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
-
-
-# sendgrid
-#EMAIL_HOST = 'smtp.sendgrid.net'
-#EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-#EMAIL_HOST_PASSWORD = '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' # this is your API key
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-#DEFAULT_FROM_EMAIL = 'qatra2023@gmail.com' # this is the sendgrid email
-# EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
-# SENDGRID_API_KEY = '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'
-# DEFAULT_FROM_EMAIL = 'qatra2023@gmail.com'
-
-
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
 
 
 
 DATE_INPUT_FORMATS = [
     '%m-%d-%Y', # for example: 29-04-2023
-
-
 ]
