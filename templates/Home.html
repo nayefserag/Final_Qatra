@@ -27,7 +27,7 @@
     <!---=========================== Start Navbar =====================================--->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{% url 'home' %}">
             <img src="{% static 'images/logo.png' %}">
             <p>قطرة</p>
           </a>
@@ -74,7 +74,7 @@
                         {% else %}
                         <!-- تسجيل الدخول -->
                             <form class="submit_btm me-auto">
-                            <button type="button" id="submit_btn" class="btn submit_btn" ><a href="{% url 'login' %}" >تسجيل الدخول</button>   
+                                <a href="{% url 'login' %}" > <button type="button" id="submit_btn" class="btn submit_btn" >تسجيل الدخول</button>   </a>
                             </form>
                         {% endif %}
           </div>
@@ -141,11 +141,11 @@
                     <div class="carton">
                         <img src="{% static 'images/carton.png' %}" alt="">
                     </div> 
-                    <button class="submit_btn" type="submit">
+                  <a href="{% url 'donate1' %}">  <button class="submit_btn" type="submit">
    
-                    <a href="{% url 'donate1' %}">اريد التبرع</a>
+                    اريد التبرع
  
-                    </button>    
+                    </button>     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 video">
                     <video src="{% static 'video/قطرة ‑ Made with FlexClip (1).mp4' %}" loop autoplay muted width="100%" height="100%' %}"></video>
@@ -179,12 +179,12 @@
                         ,عن طريق الضغط على زر  (تبرع) ,و ملئ  استمارة الخاصه بتبرع ,
                         وسوف نرسل لك اقرب مستشفى بحاجه اليك   
                     </p>
-                    <button class="submit_btn" type="submit">
+                     <a href="{% url 'donate3' %}"> <button class="submit_btn" type="submit">
                        
-                        <a href="{% url 'donate3' %}">طلب متبرع</a>
+                      طلب متبرع
                         
                      
-                    </button>   
+                    </button>  < /a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 image">
                     <img class="w-100 rounded-3" src="{% static 'images/iStock-1266746889.jpg' %}">

@@ -27,7 +27,7 @@
         <!---=========================== Start Navbar =====================================--->
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand"  href="{% url 'home' %}">
                 <img src="{% static 'images/logo.png' %}">
                 <p>قطرة</p>
               </a>
@@ -71,7 +71,7 @@
                     </a>
                 </form>
                 {% else %}
-                <button type="button" id="submit_btn" class="btn submit_btn" ><a href="{% url 'login' %}"> تسجيل الدخول</a></button>
+                <a href="{% url 'login' %}">  <button type="button" id="submit_btn" class="btn submit_btn" > تسجيل الدخول</button> </a>
                 {% endif %}
                 <!-- pop up -->
                 <!-- يعد تسجيل الدخول -->
