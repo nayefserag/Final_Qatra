@@ -12,7 +12,7 @@ from django.template import RequestContext
 
 # @login_required(login_url='login')
 def home(request):
-     return render(request ,'home.htmllll')
+     return render(request ,'Home.html')
 
 
 def Sginup(request):
