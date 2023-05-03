@@ -213,4 +213,4 @@ DATE_INPUT_FORMATS = [
     '%m-%d-%Y', # for example: 29-04-2023
 ]
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','ec2-54-197-39-47.compute-1.amazonaws.com']
