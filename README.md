@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # QATRA 🩸
 
 Qatra Blood Bank Management website is a web application designed to help manage and track blood donations and inventory for a blood bank. The website is primarily for blood bank staff, healthcare providers, and donors who want to register, schedule appointments, and keep track of their donation history.
@@ -47,8 +45,11 @@ I'm a full stack developer...
 If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 
-![Logo](https://photos.app.goo.gl/JA5aKeygMuw6dChQA)
-
+![Logo]
+<p align="center">
+  <img src="static/images/logo.png" width="350" title="hover text">
+<!--   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text"> -->
+</p>
 =======
 # Final_Qatra
 >>>>>>> 19dafdf1e1a4953fd9eceb79e249f0a70ae82307
