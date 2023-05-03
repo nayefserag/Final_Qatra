@@ -7,7 +7,7 @@ echo "Cloning the app"
 sudo cp -r /home/ubuntu/qatra-backend-repo /home/ubuntu/qatra-backend
 
 echo "copy secrets to api app directory"
-sudo cp -r /home/ubuntu/secrets/* /home/ubuntu/qatra-backend
+sudo cp -r /home/ubuntu/secrets/.env /home/ubuntu/qatra-backend/.env
 
 echo "Changing ownership of the app directory"
 sudo chown -R ubuntu:ubuntu /home/ubuntu/qatra-backend
