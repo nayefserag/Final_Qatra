@@ -7,7 +7,6 @@
         "wait_ready": true,
         "autorestart": true,
         "max_restarts": 5,
-        "interpreter" : "pipenv",
-        "interpreter_args": "run python"
+        "interpreter" : "python"
     }]
 }

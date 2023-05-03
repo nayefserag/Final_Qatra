@@ -14,5 +14,7 @@ sudo chown -R ubuntu:ubuntu /home/ubuntu/qatra-backend
 
 echo "Installing dependencies"
 cd /home/ubuntu/qatra-backend
-pipenv install -r requirements.txt
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
 
