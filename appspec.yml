@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: .
+    destination: /home/ubuntu/qatra-backend-repo
+hooks:
+  AfterInstall:
+    - location: ./scripts/app-setup.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: ./scripts/start-app.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStop:
+    - location: ./scripts/stop-app.sh
+      timeout: 300
+      runas: ubuntu
+  ValidateService:
+    - location: ./scripts/test-app.sh
+      timeout: 300
+      runas: ubuntu
