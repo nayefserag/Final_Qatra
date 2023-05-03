@@ -14,11 +14,11 @@ from django.contrib.auth.views import (
 )
 
 urlpatterns = [
+    path('', home , name = 'home'),
     path('accounts/', include('allauth.urls') ,name='accounts'),
     path('auth/', include('social_django.urls', namespace='social')),
     path('logout/',logout_view,name= 'logout'),
     path('notification/',notification , name= 'notification'),
-    path('Home/', home , name = 'home'),
     path('login/',views.LoginView.as_view(template_name='login.html'), name='login'),
     path('SignUp/',Sginup, name='SignUp'),
     path('yourprofile/',profile,name='profile'),

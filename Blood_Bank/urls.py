@@ -18,8 +18,8 @@ from django.urls import path , include
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    path('',include('Login_Sginup.urls')),
     path('admin/', admin.site.urls),
-    path('Auth/',include('Login_Sginup.urls')),
     path('Requests/',include('Requests.urls'))
 
 ]

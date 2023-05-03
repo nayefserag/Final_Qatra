@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import * 
 from django.contrib import messages
 from .forms import UserRegistrationForm 
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.http import HttpResponse
@@ -30,12 +31,17 @@ def Sginup(request):
 
 
 
+# def logout_view(request):
+#     logout(request)
+#     if 'form_fields' in request.session:
+#         del request.session['form_fields']
+#     return redirect('login')
+
 def logout_view(request):
     logout(request)
     if 'form_fields' in request.session:
         del request.session['form_fields']
     return redirect('login')
-
 
 
 def notification(request):

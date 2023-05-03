@@ -46,7 +46,7 @@ I'm a full stack developer...
 If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 
-![Logo]
+
 
 <p align="center">
   <img src="static/images/logo.png" width="350" title="hover text">

@@ -212,3 +212,5 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_SEC
 DATE_INPUT_FORMATS = [
     '%m-%d-%Y', # for example: 29-04-2023
 ]
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
