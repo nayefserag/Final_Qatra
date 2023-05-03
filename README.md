@@ -46,7 +46,10 @@ If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 
 ![Logo](https://photos.app.goo.gl/JA5aKeygMuw6dChQA)
-
+<p align="center">
+  <img src="static/images/alert.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 =======
 # Final_Qatra
 >>>>>>> 19dafdf1e1a4953fd9eceb79e249f0a70ae82307
