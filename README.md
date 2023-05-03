@@ -20,11 +20,12 @@ Overall, Qatra Blood Bank Management website provides an easy-to-use platform fo
 
 ## Installation
 
-Install my-project with npm
+Install python 3.10.8 version first
+        THEN
+Install  requirements file    
 
 ```bash
-  npm install my-project
-  cd my-project
+  pip install -r requirements.txt
 ```
     
 ## Deployment
@@ -47,6 +48,8 @@ If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 ![Logo](https://photos.app.goo.gl/JA5aKeygMuw6dChQA)
 
+<p align="center">
+  <img src="static/images/logo.png" width="350" title="hover text">
+<!--   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text"> -->
+</p>
 =======
-# Final_Qatra
->>>>>>> 19dafdf1e1a4953fd9eceb79e249f0a70ae82307
