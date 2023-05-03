@@ -1,0 +1,78 @@
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=========================== Icon Browser =================================-->
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.png">
+    <!--=========================== font-awesome File ============================-->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!--=========================== Bootstrap File ===============================-->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <!--=========================== Font Google ===============================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!--=========================== Css File =====================================-->
+    <link rel="stylesheet" href="./sass/Master.css">
+    <title>قطرة</title>
+</head>
+<h3>login</h3>
+<div class="login-box d-flex justify-content-center align-items-center" id="login-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 logo">
+                    <img class="img-logo" src="images/logo.png">
+                    <img class="img-character" src="images/happy-cracter.png">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 sign-form">
+                    
+<form action="" method="POST">
+    {% csrf_token %}
+    {% comment %} {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %} {% endcomment %}
+    {% comment %} <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+    <button type="submit">Login</button> {% endcomment %}
+
+    {% comment %} <button class="btn btn-danger  mb-2">
+        <a href="{% provider_login_url "google" %}">Continue Via Google</a>
+    </button>
+    <button><a href="http://127.0.0.1:8000/Auth/SignUpBB/">Sign up With BloodBank</a></button>
+    <button><a href="http://127.0.0.1:8000/Auth/password-reset/">Forget Password?</a></button>
+    {% endcomment %}
+
+
+
+
+    <h3>مرحباً بك من جديد</h3>
+    <p>
+         ليس لديك حساب ؟ 
+        <a href="./SignUp.html">انشئ حساب جديد الان</a>
+    </p>
+    <div class="col-sm-12 user-box">
+        <label>الاسم</label>
+        <input class="input-form" type="" name="username"  id="id_username" required>
+    </div>
+    <div class="col-sm-12 user-box">
+        <label>كلمة المرور</label>
+        <a href="./forget_password.html">نسيت كلمة المرور ؟</a>
+        <input class="input-form" type="password" name="password" id="id_password"required>
+    </div>
+    <div class="col-sm-12 user-box">
+        <input class="check" type="checkbox">
+        <label class="checkBox">تذكرني</label>
+    </div>
+    <div class="btn-box">
+        <button class="submit_btn" type="submit">تسجيل الدخول</button>  
+        <button class="google_btn" type="submit">
+            <a href="{% provider_login_url "google" %}">Continue Via Google</a>
+            <img src="images/Google__G__Logo 1.png">
+        </button>
+    </div>
+</form>
+

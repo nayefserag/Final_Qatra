@@ -1,0 +1,181 @@
+@import './resets';
+@import './globel';
+//============================= Start Navbar ====================================//
+ .navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+    background: var(--white);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    .navbar-brand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            color: var(--dark);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 20px;
+        }
+    }
+    .navbar-toggler{
+        color: var(--pink);
+        font-size: 30px;
+        font-weight: 300;
+        border:1px solid var(--pink);
+        padding-top: 6px;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .navbar-collapse{
+        .navbar-nav{
+            padding-right:55px;
+            .navbar_item{
+                margin: 0px 20px;
+                width: 90px;
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    right: 0;
+                    bottom: -10px;
+                    transition: 0.3s;
+                    background-color: var(--pink);
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+                .navbar__link{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: var(--dark);
+                    &:hover{
+                        color: var(--pink);
+                    }
+                }
+                .active{
+                    color: var(--pink);
+                    padding-bottom: 5px;
+                }
+            }
+        }
+        form{
+            .notifications{
+                i{
+                    color: var(--pink);
+                    font-size: 20px;
+                }
+            }
+            .nav-profile{
+                padding: 0 10px;
+                img{
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+            .log-Out{
+                i{
+                    color: var(--pink);
+                    font-size: 20px;                
+                }
+            }
+            .popup{
+                position: absolute;
+                background: var(--white);
+                border-radius: 5px;
+                top: 0;
+                left: 18%;
+                transform: translate(50%, 50%) scale(0.1);
+                width: 467px;
+                height: 345px;
+                visibility: hidden;
+                transition: transform 0.4s , top 0.4s;
+                i{
+                    position: absolute;
+                    right: 30px;
+                    top: 30px;
+                    color: var(--pink);
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+                img{
+                    width: 150px;
+                }
+                .pop-header{
+                    color: var(--pink);
+                    font-weight: 600;
+                    font-size: 40px;
+                }
+                .pop-paragraph{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 26px;
+                    width: 235px;
+                    height: 52px;
+                    margin: 20px auto;
+                }
+                button{
+                    background: var(--pink);
+                    border-color:var(--pink);
+                    a{
+                        color: var(--white);
+                    }
+                }
+            }
+            .open-popup{
+                visibility: visible;
+                top: 50%;
+                transform: translate(50%, 50%) scale(1);
+            }
+            ///////////////////
+            .blur-background {
+                filter: blur(5px);
+                backdrop-filter: blur(5px);
+            }
+            /////////////////////
+        }
+    }
+ }
+//============================= End Navbar ====================================//
+//============================= Start Media  ====================================//
+@media (max-width:$mobile){
+    .navbar{
+        .navbar-collapse{
+            padding-right: 20px;
+            height: 83vh;
+            .navbar-nav{
+                .navbar_item{
+                    margin: 20px 0;
+                }
+            }
+            form{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width:$iPad){
+    .navbar{
+        .navbar-collapse{
+            height: 72vh;
+            .navbar-nav{
+                .navbar_item{
+                    margin: 25px auto;
+                }
+            }
+            form{
+                display: none;
+            }
+        }
+    }
+}
+ //============================= End Media  ====================================//

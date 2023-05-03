@@ -1,0 +1,90 @@
+@import './resets';
+@import './globel';
+/////////////////////////////////////////////
+.login-box{
+    background:linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("../images/la.png");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    .sign-form{
+        background-color: var(--white);
+        width: 465px;
+        height: 500px;
+        padding: 25px;
+        transform: translateX(-170px);
+        h3{
+            color: var(--dark);
+            font-size: 25px;
+            font-weight: 600;
+        }
+        p{
+            color: var(--dark);
+            font-size: 16px;
+            // font-weight: 500;
+            padding: 10px 0;
+            a{
+                color: var(--pink);
+            }
+        }
+        .user-box{
+            position: relative;
+            margin-bottom: 10px;
+            .input-form{
+                width: 100%;
+                height: 48.99px;
+                outline: none;
+                border-radius: 3px;
+                border: none;
+                border: 2px solid var(--pink);
+                margin-bottom: 15px;
+                padding-right: 15px;
+            }
+            label{
+                background: white;
+                top: -15px;
+                right: 5px;
+                position: absolute;
+                font-weight: 600;
+            }
+            a{
+                color: var(--pink);
+                position: absolute;
+                top: -21px;
+                left: 0;
+            }
+            .checkBox{
+                top: -2px;
+                right: 20px;
+            }
+            &:nth-child(3){
+                margin-bottom:30px;
+            }
+        }
+        .btn-box{
+            .submit_btn{
+                width: 100%;
+                height: 50px;
+                border-radius: 7px;
+                margin: 15px 0;
+            }
+            .google_btn{
+                width: 100%;
+                height: 50px;
+                border-radius: 7px;
+                border: 1px solid var(--pink);
+                background: none;
+            }
+        }
+        }
+}
+//============================= Start Media  ====================================//
+@media (max-width: 767px){
+    .login-box{
+        padding-right: 20px;
+        .sign-form{
+            transform: translateX(13px);
+        }
+    }
+}
+//============================= End Media  ====================================//

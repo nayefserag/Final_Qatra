@@ -1,0 +1,99 @@
+{% load socialaccount %}
+{% providers_media_js %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=========================== Icon Browser =================================-->
+    <link rel="shortcut icon" type="x-icon" href="./images/logo.png">
+    <!--=========================== font-awesome File ============================-->
+    <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
+    <!--=========================== Bootstrap File ===============================-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <!--=========================== Font Google ===============================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <!--=========================== Css File =====================================-->
+    <link rel="stylesheet" href="{% static 'sass/Master.css'%}">
+    <title>قطرة</title>
+</head>
+<body>
+
+     <div class="new-account d-flex justify-content-center align-items-center" id="new-account">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 logo">
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 new-form">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <h3>مرحباً بك من جديد</h3>
+                        <p>
+                             ليس لديك حساب ؟ 
+                            <a href="{% url 'login'%}">سجل دخولك الان</a>
+                        </p>
+
+                        <div class="col-sm-12 user-box">
+                            <label> {{ form.username.label }}</label>
+                            <input class="input-form" type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" value="{{ form.username.value|default:'' }}" >
+                            {% if form.username.errors %}
+                            <small style="color: red">{{ form.username.errors }}</small>
+                             {% endif %}
+                        </div>
+
+                        <div class="col-sm-12 user-box">
+                            <label> {{ form.email.label }}</label>
+                            <input class="input-form" type="text" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value|default:'' }}" >
+                            {% if form.email.errors %}
+                            <small style="color: red">{{ form.email.errors }}</small>
+                             {% endif %}
+                        </div>
+                        <div class="col-sm-12 user-box">
+                            <label>{{ form.phone.label }} </label>
+                            <input class="input-form" type="text" name="{{ form.phone.name }}" id="{{ form.phone.id_for_label }}" value="{{ form.phone.value|default:'' }}" >
+                            {% if form.phone.errors %}
+                            <small style="color: red">{{ form.phone.errors }}</small>
+                             {% endif %}
+                        </div>
+                        <div class="col-sm-12 user-box">
+                            <label>{{ form.password1.label }} </label>
+                            <input class="input-form" type="password" name="{{ form.password1.name }}" id="{{ form.password.id_for_label }}" value="{{ form.password1.value|default:'' }}" >
+                            {% if form.password1.errors %}
+                            <small style="color: red">{{ form.password1.errors }}</small>
+                             {% endif %}
+                        </div>
+                        
+                        <div class="col-sm-12 user-box">
+                            <label>{{ form.password2.label }}</label>
+                            <input class="input-form" type="password" name="{{ form.password2.name }}" id="{{ form.password2.id_for_label }}" value="{{ form.passwprd2.value|default:'' }}" >
+                            {% if form.password2.errors %}
+                            <small style="color: red">{{ form.password2.errors }}</small>
+                             {% endif %}
+                        </div>
+        
+                        <div class="btn-box">
+                            <button class="submit_btn" type="submit">حساب جديد</button>  
+                            <button class="google_btn" type="button" href="{% provider_login_url "google" %}">
+                               <a href="{% provider_login_url "google" %}">Continue Via Google</a>
+                            
+                                <img src="{% static 'images/Google__G__Logo 1.png'%}">
+                            </button>
+                        </div>  
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---=========================== Jquery File =====================================--->
+    <script src="{% static 'js/jquery-3.6.3.min.js'%}"></script>
+    <!--=========================== Bootstrap File =====================================-->
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <!--=========================== Js File =====================================-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{% static 'js/script.js'%}"></script> 
+</body> 
+</html>

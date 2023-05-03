@@ -1,0 +1,12 @@
+{
+    "apps": [{
+        "name": "qatra_server",
+        "script": "manage.py",
+        "args": ["runserver", "0.0.0.0:8080"],
+        "exec_mode": "fork",
+        "wait_ready": true,
+        "autorestart": true,
+        "max_restarts": 5,
+        "interpreter" : "python"
+    }]
+}
