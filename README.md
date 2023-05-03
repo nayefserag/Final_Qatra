@@ -45,10 +45,10 @@ I'm a full stack developer...
 If you have any feedback, please reach out to us at Qatra2023@gmail.com
 
 
-![Logo](https://photos.app.goo.gl/JA5aKeygMuw6dChQA)
+![Logo]
 <p align="center">
-  <img src="static/images/alert.png" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+  <img src="static/images/logo.png" width="350" title="hover text">
+<!--   <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text"> -->
 </p>
 =======
 # Final_Qatra
