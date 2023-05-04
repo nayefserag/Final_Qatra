@@ -210,10 +210,4 @@ DATE_INPUT_FORMATS = [
 
 ALLOWED_HOSTS = [
     '*'
-    # 'localhost', 
-    # '127.0.0.1',
-    # 'ec2-54-197-39-47.compute-1.amazonaws.com',
-    # 'qatra-prod-1714654610.us-east-1.elb.amazonaws.com'
-    # '172.31.92.178',
-    # 'qatra.cardigoo.com'
     ]
