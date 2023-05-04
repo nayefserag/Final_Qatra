@@ -33,9 +33,7 @@ ALLOWED_HOSTS = [
     "ec2-54-197-39-47.compute-1.amazonaws.com",
     "qatra-prod-1714654610.us-east-1.elb.amazonaws.com",
     "qatra.cardigoo.com",
-    "172.31.92.178:8080",
-    "172.31.92.178:80",
-    "172.31.92.178:443"
+    "172.31.92.178"
 ]
 
 
