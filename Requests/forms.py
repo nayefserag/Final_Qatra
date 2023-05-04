@@ -2,7 +2,6 @@ from django import forms
 from .models import *
 
 
-
 class BloodRequestForm(forms.ModelForm):
     class Meta:
         model = BloodRequest
@@ -13,6 +12,9 @@ class BloodRequestForm(forms.ModelForm):
             'date' : 'تاريخ اخر تبرع',
 
         } 
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date'})
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -63,7 +63,7 @@
                         <a class="nav-profile" href="{% url 'profile' %}" target="_blank">
                             <img  src="{% static 'images/profile_nav.png' %}">
                         </a>
-                        <a class="log-Out" href="{% url 'login' %}" target="_self">
+                        <a class="log-Out" href="{% url 'logout' %}" target="_self">
                             <i class="fa-solid fa-right-to-bracket"></i>
                         </a>
                     </form>
@@ -72,17 +72,7 @@
                     {% endif %}
                     <!-- pop up -->
                     <!-- يعد تسجيل الدخول -->
-                    <!-- <form class="submit_btm me-auto">
-                        <a class="notifications" href="notification.html">
-                            <i class="fa-regular fa-bell "></i>
-                        </a>
-                        <a class="nav-profile" href="profile.html" target="_blank">
-                            <img  src="{% static 'images/profile_nav.png' %}">
-                        </a>
-                        <a class="log-Out" href="index.html" target="_self">
-                            <i class="fa-solid fa-right-to-bracket"></i>
-                        </a>
-                    </form> -->
+
                     <!-- pop up -->
                   </div>
                 </div>
@@ -99,7 +89,10 @@
                             <img src="{% static 'images/alert.png' %}">
                         </div>
                         <div class="btn-box">
-                         <a href="{% url 'home' %}">   <button class="submit_btn" type="submit">تم ارسال الطلب </button>  <a/>
+                         <button class="submit_btn" type="submit">  <a href="{% url 'home' %}">  تم ارسال الطلب </a> </button>  
+
+
+                         
                         </div>  
                       </form>
                 </div>

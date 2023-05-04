@@ -11,7 +11,7 @@ BLOOD_TYPES = [
         ('AB-', 'AB-'),
     ]
 class BloodRequest(models.Model):
-    blood_type = models.CharField(max_length=3, choices=BLOOD_TYPES ,verbose_name='فصيلة الدم')
+    blood_type=models.CharField(max_length=3,choices=BLOOD_TYPES,verbose_name='فصيلة الدم')
     location = models.CharField(max_length=255, verbose_name='الموقع')
     date = models.DateField(verbose_name='تاريخ اخر تبرع')
 
@@ -20,7 +20,7 @@ class BloodRequest(models.Model):
 
 
 class RequestDonor(models.Model):
-    blood_type = models.CharField(max_length=3, choices=BLOOD_TYPES ,verbose_name='فصيلة الدم')
+    blood_type=models.CharField(max_length=3,choices=BLOOD_TYPES,verbose_name='فصيلة الدم')
     location = models.CharField(max_length=255, verbose_name='الموقع')
     drugs=models.CharField(max_length=255, verbose_name='الادوية اللتي يتناولها المريض')
     Patient_Status=models.CharField(max_length=255 ,verbose_name='حالة المريض')

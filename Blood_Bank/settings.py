@@ -95,16 +95,29 @@ WSGI_APPLICATION = 'Blood_Bank.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get("DB_USER"),
+#         'PASSWORD': os.environ.get("DB_PASSWORD"),
+#         'HOST': os.environ.get("DB_HOST"),
+#         'PORT': os.environ.get("DB_PORT"),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get("DB_USER"),
-        'PASSWORD': os.environ.get("DB_PASSWORD"),
-        'HOST': os.environ.get("DB_HOST"),
-        'PORT': os.environ.get("DB_PORT"),
+        'NAME': 'db',
+        'USER': 'root',
+        'PASSWORD': 'nayf',
+        'HOST':'localhost', #127.0.0.1
+        'PORT':'3306',
     }
 }
+
 
 
 # Password validation
@@ -208,6 +221,4 @@ DATE_INPUT_FORMATS = [
     '%m-%d-%Y', # for example: 29-04-2023
 ]
 
-ALLOWED_HOSTS = [
-    '*'
-    ]
+ALLOWED_HOSTS = ['*']

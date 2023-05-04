@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import * 
 from django.contrib import messages
 from .forms import UserRegistrationForm 
+# from .models import MyUser
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
@@ -9,24 +10,47 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from allauth.account.views import SignupView, LoginView, PasswordResetView
 from django.template import RequestContext
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
 
 # @login_required(login_url='login')
 def home(request):
      return render(request ,'Home.html')
 
-
 def Sginup(request):
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            # username = form.cleaned_data.get('username')
-            # messages.success(request, f'Account created for {username}!')    
-            return redirect('login')
+            try:
+                form.save()
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password1')
+                user = authenticate(request, username=username, password=password)
+                login(request, user)
+                return redirect('home')
+            except:
+                form = UserRegistrationForm()
+                return render(request, 'SignUp.html', {'form': form})
     else:
         form = UserRegistrationForm()
 
     return render(request, 'SignUp.html', {'form': form})
+
+# def Sginup(request):
+#     if request.method == "POST":
+#         form = UserRegistrationForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             messages.success(request, f'Account created for {username}!')    
+#             return redirect('login')
+#     else:
+#         form = UserRegistrationForm()
+
+#     return render(request, 'SignUp.html', {'form': form})
 
 
 
@@ -94,16 +118,34 @@ def profile(request):
 # في هنا خرا خرا خرا
 ##########
 
-def profileedited(request):
-    profile = request.user
-    if request.method == 'POST':
-        form = UserRegistrationForm(request.POST, instance=profile)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Your profile was updated successfully!')
-            return redirect('profile')
-    else:
-        form = UserRegistrationForm(instance=profile)
+# def profileedited(request):
+#     profile = request.user
+#     if request.method == 'POST':
+#         form = UserRegistrationForm(request.POST, instance=profile)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, 'Your profile was updated successfully!')
+#             return redirect('profile')
+#     else:
+#         form = UserRegistrationForm(instance=profile)
 
     
-    return render(request, 'profileedited.html', {'form': form})
+#     return render(request, 'profileedited.html', {'form': form})
+
+
+def profile_update(request):
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST, instance=request.user)
+        password_form = PasswordChangeForm(user=request.user, data=request.POST)
+        if user_form.is_valid() and password_form.is_valid():
+            user_form.save()
+            update_session_auth_hash(request, password_form.user)
+            messages.success(request, 'Your profile was updated successfully!')
+            return redirect('profile_update')
+        else:
+            messages.error(request, 'Please correct the errors below.')
+    else:
+        user_form = UserRegistrationForm(instance=request.user)
+        password_form = PasswordChangeForm(user=request.user)
+
+    return render(request, 'profileedited.html', {'user_form': user_form, 'password_form': password_form})

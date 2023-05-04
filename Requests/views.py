@@ -26,7 +26,5 @@ def ReceiveRequest(request):
     else:
         form = RequestDonor()
     return render(request, 'donation_reqest2.html',{'form': form})
-
-
 def ReceiveRequestDone(request):
      return render(request, 'donation_reqest3.html')

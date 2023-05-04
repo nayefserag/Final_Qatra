@@ -63,7 +63,7 @@
                     <a class="nav-profile" href="{% url 'profile' %}" target="_blank">
                         <img  src="{% static 'images/profile_nav.png' %}">
                     </a>
-                    <a class="log-Out" href="{% url 'login' %}" target="_self">
+                    <a class="log-Out" href="{% url 'logout' %}" target="_self">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </form>
@@ -85,30 +85,55 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-user"></i>
-                            <label>الاسم :  </label>
-                    </div>
-                        <input class="input-form" type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" value="{{ form.username.value|default:'' }}" >
-                    </div>
+                            <label>{{user_form.username.label }} :</label>
+                          </div>
+                            <input class="input-form" type="text" name="{{ user_form.username.name }}" id="{{ user_form.username.id_for_label }}" value="{{ user_form.username.value|default:'' }}" ><br>
+                            
+                        </div>
+                        {% if user_form.username.errors %}
+                        <small style="color: red"> {{ user_form.username.errors }}</small>
+                         {% endif %}      
+                        
+                         <div class="col-lg-12 col-md-12 col-sm-12 box">
+                            <div class="box-label">
+                                <i class="fa-solid fa-envelope"></i>
+                                <label>{{ password_form.old_password.label}}</label>
+                            </div>
+                            <input class="input-form" type="text" name="{{ password_form.old_password.name }}" id="{{ password_form.old_password.id_for_label }}" value="{{ password_form.old_password.value|default:'' }}" required>
+                        </div> 
+                        {% if password_form.old_password.errors %}
+                        <small style="color: red">{{ password_form.old_password.errors }}</small>
+                         {% endif %}
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-lock"></i>
-                            <label>كلمه السر :</label>
+                            <label>{{password_form.new_password1.label }} :</label>
                         </div>
-                           {{ form.phone.value}}
-                    </div>
+                            <input class="input-form" type="password" name="{{ password_form.new_password1.name }}" id="{{ password_form.new_password1.id_for_label }}" value="{{ password_form.new_password1.value|default:'' }}" required>
+                        </div>
+                        {% if password_form.new_password1.errors %}
+                        <small style="color: red">{{ password_form.new_password1.errors }}</small>
+                         {% endif %}
+                    <div class="col-lg-12 col-md-12 col-sm-12 box">
+                        <div class="box-label">
+                            <i class="fa-solid fa-lock"></i>
+                             <label>{{password_form.new_password2.label }}:</label>
+                        </div>
+                        <input class="input-form" type="password" name="{{ password_form.new_password2.name }}" id="{{ password_form.new_password2.id_for_label }}" value="{{ password_form.new_password2.value|default:'' }}" required>
+                        
+                    </div> 
+                    {% if password_form.new_password2.errors %}
+                        <small style="color: red">{{ password_form.new_password2.errors }}</small>
+                    {% endif %}
+
+
+
                     <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
                             <i class="fa-solid fa-phone-volume"></i>
-                            <label>رقم الهاتف :</label>
+                             <label>{{user_form.first_name.label }}:</label>
                         </div>
-                        <input class="input-form" type="tel" name="{{ form.phone.name }}" id="{{ form.phone.id_for_label }}" value="{{ form.phone.value|default:'' }}" >
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 box">
-                        <div class="box-label">
-                            <i class="fa-solid fa-envelope"></i>
-                            <label>البريد الالكتروني :</label>
-                        </div>
-                        <input class="input-form" type="text" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value|default:'' }}" >
+                     {{ user_form.first_name.value|default:'' }}
                     </div>
                     {% comment %} <div class="col-lg-12 col-md-12 col-sm-12 box">
                         <div class="box-label">
@@ -116,18 +141,19 @@
                             <label>الفصيله : </label>
                         </div>
                         <input type="text" name="" id="">
-                    </div> {% endcomment %}
+                    </div>  {% endcomment %}
                     <button class="submit_btn save-changes" type="submit">حفظ التغيرات</button>  
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-6 profile-photo text-center">
                     <h4>الصورة الشخصية </h4>
                     <img src="{% static 'images/profile-photo.png' %}" alt="">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <p>حذف الصورة</p>
+
+                   <p>  اهلا يا {{ user_form.username.value}} </p>
                 </div>
             </div>
         </div>
     </div>
+
  </form>
     <!---=========================== Jquery File =====================================--->
     <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>

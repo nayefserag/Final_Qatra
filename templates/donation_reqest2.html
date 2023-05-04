@@ -66,7 +66,7 @@
                     <a class="nav-profile" href="{% url 'profile' %}" target="_blank">
                         <img  src="{% static 'images/profile_nav.png' %}">
                     </a>
-                    <a class="log-Out" href="{% url 'login' %}" target="_self">
+                    <a class="log-Out" href="{% url 'logout' %}" target="_self">
                         <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </form>
@@ -90,17 +90,14 @@
                         {% csrf_token %}
                         <h3>طلب متبرع</h3>
                         <div class="col-sm-12 user-box">
-                            <label>{{ form.blood_type.label }}:</label>
-                             {% comment %} <select class="form-select" aria-label="Default select example">
-                                <option selected></option>
-                                <option value="A+">A+</option>
-                                <option value="A-">A-</option>
-                                <option value="AB+">AB+</option>
-                                <option value="AB-">AB-</option>
-                                <option value="O+">O+</option>
-                                <option value="O-">O-</option>
-                            </select>  {% endcomment %}
-                            <input class="input-form" type="text" name="{{ form.blood_type.name }}" id="{{ form.blood_type.id_for_label }}" value="{{ form.blood_type.value|default:'' }}" > 
+                             <div class="col-sm-12 user-box">
+                            <label>{{ form.blood_type.label }}  :</label>
+                            <select name="{{form.blood_type.name}}" class="form-select" aria-label="Default select example">
+            
+                                {% for value, label in form.blood_type.field.choices %}
+                                 <option value="{{ value }}" {% if value == form.blood_type.value %}selected{% endif %}>{{ label }}</option>
+                                {% endfor %}
+                            </select> 
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.location.label }} :</label>

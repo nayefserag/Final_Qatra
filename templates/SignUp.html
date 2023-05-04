@@ -38,29 +38,29 @@
                         </p>
 
                         <div class="col-sm-12 user-box">
-                            <label> {{ form.username.label }}</label>
-                            <input class="input-form" type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" value="{{ form.username.value|default:'' }}" >
+                            <label> اسم المستخدم :</label>
+                            <input class="input-form" type="username" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}" value="{{ form.username.value|default:'' }}" >
                             {% if form.username.errors %}
                             <small style="color: red">{{ form.username.errors }}</small>
                              {% endif %}
                         </div>
 
                         <div class="col-sm-12 user-box">
-                            <label> {{ form.email.label }}</label>
-                            <input class="input-form" type="text" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value|default:'' }}" >
+                            <label> البريد الإلكتروني :</label>
+                            <input class="input-form" type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}" value="{{ form.email.value|default:'' }}" >
                             {% if form.email.errors %}
                             <small style="color: red">{{ form.email.errors }}</small>
                              {% endif %}
                         </div>
                         <div class="col-sm-12 user-box">
-                            <label>{{ form.phone.label }} </label>
-                            <input class="input-form" type="text" name="{{ form.phone.name }}" id="{{ form.phone.id_for_label }}" value="{{ form.phone.value|default:'' }}" >
+                            <label>{{form.first_name.label}}</label>
+                            <input class="input-form" type="phone" name="{{ form.first_name.name }}" id="{{ form.first_name.id_for_label }}" value="{{ form.first_name.value|default:'' }}" >
                             {% if form.phone.errors %}
                             <small style="color: red">{{ form.phone.errors }}</small>
                              {% endif %}
                         </div>
                         <div class="col-sm-12 user-box">
-                            <label>{{ form.password1.label }} </label>
+                            <label>كلمة المرور :</label>
                             <input class="input-form" type="password" name="{{ form.password1.name }}" id="{{ form.password.id_for_label }}" value="{{ form.password1.value|default:'' }}" >
                             {% if form.password1.errors %}
                             <small style="color: red">{{ form.password1.errors }}</small>
@@ -68,7 +68,7 @@
                         </div>
                         
                         <div class="col-sm-12 user-box">
-                            <label>{{ form.password2.label }}</label>
+                            <label>تأكيد كلمة المرور :</label>
                             <input class="input-form" type="password" name="{{ form.password2.name }}" id="{{ form.password2.id_for_label }}" value="{{ form.passwprd2.value|default:'' }}" >
                             {% if form.password2.errors %}
                             <small style="color: red">{{ form.password2.errors }}</small>
