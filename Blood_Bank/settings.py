@@ -30,7 +30,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "ec2-54-197-39-47.compute-1.amazonaws.com"
+    "ec2-54-197-39-47.compute-1.amazonaws.com",
+    "qatra-prod-1714654610.us-east-1.elb.amazonaws.com",
+    "qatra.cardigoo.com"
 ]
 
 
