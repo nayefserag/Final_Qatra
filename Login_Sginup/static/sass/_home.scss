@@ -202,11 +202,11 @@
 //============================= End Media donation ====================================//
 //============================= Start donation prosess ==================================//
 .donation__prosess{
+    position: relative;
     background: url("../images/dots.webp") , no-repeat ;
     background-size: cover;
     width: 100%;
     height: 100%;
-    position: relative;
     margin: 50px auto;
     top: 0;
     .header{
@@ -233,7 +233,7 @@
                 }
                 p{
                     width: 370px;
-                    max-width:290px;
+                    max-width: 305px;
                     font-size: 14px;
                 }
             }
