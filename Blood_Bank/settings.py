@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    #  'django.contrib.sites',
+      'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     ##
@@ -222,4 +222,4 @@ DATE_INPUT_FORMATS = [
 ]
 
 ALLOWED_HOSTS = ['*']
-SITE_ID = 2
+SITE_ID = 9
