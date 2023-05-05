@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import * 
 from django.contrib import messages
 from .forms import UserRegistrationForm 
-# from .models import MyUser
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
@@ -15,6 +14,13 @@ from django.views.generic.edit import UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
+from django.http import  JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def extract_keywords(request):
+    text = request.POST.get('text')
+    return JsonResponse(text)
 
 # @login_required(login_url='login')
 def home(request):
