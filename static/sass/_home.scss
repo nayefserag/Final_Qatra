@@ -213,6 +213,7 @@
         text-align: center;
     }
     .prosess_boxs{
+        // position: absolute;
         margin-right: 120px;
         .prosess_box{
             .process-step{
@@ -233,7 +234,7 @@
                 }
                 p{
                     width: 370px;
-                    max-width: 305px;
+                    // max-width: 305px;
                     font-size: 14px;
                 }
             }
@@ -250,6 +251,15 @@
         }
         .prosess_boxs{
             margin-right: 0px;
+            .process-info{
+                .title{
+                    font-size: 20px;
+                }
+                p{
+                    width: 370px;
+                    max-width: 305px;
+                }
+            }
         }
     }
 }
