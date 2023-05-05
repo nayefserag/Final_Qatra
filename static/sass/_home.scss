@@ -43,17 +43,16 @@
                 right: 15%;
                 top: 40%;
                 left: 15%;
-                color: #fff;
                 text-align: center; 
                 h3{
-                    color: var(--white);
+                    color: #fff;
                     font-size: 35px;
                     font-weight: 600;   
                     opacity: 0;
                     animation: fadeInRight 0.7s ease forwards;
                 }         
                 p{
-                    color: #eeee;
+                    color: #fff;
                     opacity: 0;
                     animation: fadeInLeft 0.7s ease forwards;
                 }
@@ -111,6 +110,7 @@
             height: 100px;
             margin-top: 20px;
             margin-bottom: 0;
+            color: var(--dark);
         }
         .carton{
             img{
@@ -141,7 +141,7 @@
 }
 //============================= End section donation====================================//
 //============================= Start Media donation ====================================//
- @media (max-width:$mobile){
+@media (max-width:$mobile){
     .donation{
         height: 45vh;
         margin: 50px 0;
@@ -233,7 +233,7 @@
                 }
                 p{
                     width: 370px;
-                    // max-width: 305px;
+                    color: var(--dark);
                     font-size: 14px;
                 }
             }
@@ -279,6 +279,7 @@
        transform: translateY(65px);
        p{
         max-width: 500px;
+        color: var(--dark);
        }
        button{
         a{
@@ -325,7 +326,6 @@
 .donation__location{
     position: relative;
     .image_location{
-        // width: 50%;
         height: 100%;
         position: relative;
         img{
@@ -342,6 +342,9 @@
             i{
                 font-size: 28px;
             }
+        }
+        p{
+            color: var(--dark);
         }
     }
 }
@@ -396,6 +399,9 @@
             i{
                 font-size: 28px;
             }
+        }
+        p{
+            color: var(--dark);
         }
     }
     .image_time{
@@ -453,6 +459,10 @@
     h3{
         margin:20px auto;
     }
+    p{
+        color: var(--dark);
+        width: 290px;
+    }
     .steps_box{
         position: relative;
         margin: 15px 0;
@@ -470,9 +480,10 @@
                 position: absolute;
                 font-weight: 600;
                 font-size: 50px;
-                color: var(--dark);
+                color: var(--white);
                 transform: rotate(-4.13deg);
                 z-index: 22;
+                padding-right: 7px;
             }
             .img{
                 position: absolute;
@@ -578,7 +589,7 @@
     .footer__row{
         padding: 20px;
         h4{
-            color: var(--white);
+            color: #fff;
             font-weight: 600;
             font-size: 25px;
             line-height: 20px;
@@ -586,14 +597,14 @@
             padding: 15px 0;
         }
         p{
-            color: var(--white);
+            color: #fff;
             font-size: 14px;
             font-weight: 500;
             max-width: 950px;
         }
         h3{
             font-size: 25px;
-            color: var(--white);
+            color: #fff;
         }
         ul{
             list-style: none;
@@ -606,16 +617,16 @@
                 padding: 0 10px;
                 i{
                     font-size: 25px;
-                    color: var(--white);
+                    color: #fff;
                 }
             }
         }
         a{
-            color: var(--white);
+            color: #fff;
             padding: 10px;
         }
         .conditions{
-            border-left: 1px solid var(--white);
+            border-left: 1px solid #fff;;
 
         }
     }

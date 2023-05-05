@@ -5,6 +5,12 @@
     --brown: #7D2F32;
     --gray :#AAAAAA;
 }
+.dark-mode{
+        --white:black;  
+       --dark :#ffff;
+       --pink:#E66D72;
+       --brown: #7D2F32;
+}
 $mobile : 767px;
 $iPad : 991px;
 $labtop : 1024px;

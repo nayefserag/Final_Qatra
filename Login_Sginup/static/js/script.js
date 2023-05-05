@@ -7,7 +7,19 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.navbar , .video, .donation__prosess , .image , .steps_box ,.image_location ,.image_time , .prosess_box', { origin:'top' });
 ScrollReveal().reveal('.content , .content_location , .content_time', { origin:'bottom' });
-ScrollReveal().reveal('.donation__information', { origin:'right' });
+ScrollReveal().reveal('.donation__information ', { origin:'right' });
+////////////////////  pop Up Button  //////////////////////////
+let popup = document.getElementById("popup");
+function openPopup()
+{
+     popup.classList.add('open-popup');
+     document.body.classList.add('blur-background');
+}
+function closePopup()
+{
+     popup.classList.remove('open-popup');
+     document.body.classList.remove('blur-background');
+}
 ////////////////////  scroll up btn  //////////////////////////
 let scrollBtn = document.querySelector(".scrollBtn");
 window.onscroll = function()
@@ -30,3 +42,18 @@ scrollBtn.onclick = function()
      });
 };
 ////////////////////  scroll up btn  //////////////////////////
+
+let icon = document.getElementById("icon");
+icon.onclick = function()
+{
+     document.body.classList.toggle("dark-mode");
+     if (document.body.classList.contains("dark-mode"))
+     {
+          icon.src = "../images/sun.png";
+     }
+     else
+     {
+          icon.src = "../images/moon.gif";
+     }
+};
+ 

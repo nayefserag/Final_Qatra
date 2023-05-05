@@ -64,7 +64,7 @@
                                     <i class="fa-regular fa-bell "></i>
                                 </a>
                                 <a class="nav-profile" href="{% url 'profile' %}" target="_blank">
-                                    <img  src="{% static 'images/profile_nav.png' %}">
+                                    <img  src="{% static 'images/profile_nav.gif' %}">
                                 </a>
                                 <a class="log-Out" href="{% url 'logout' %}" target="_self">
                                     <i class="fa-solid fa-right-to-bracket"></i>
@@ -82,6 +82,8 @@
                     {% endif %}
 
           </div>
+          <!-- dark mode -->
+          <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}">
         </div>
     </nav>
     <!---=========================== End Navbar =====================================--->
@@ -173,7 +175,7 @@
                     <div class="container ss">
                         <div class="row prosess_boxs">
     
-                            <div class="prosess_box col-lg-5 col-md-5 col-sm-10 d-flex justify-content-center align-items-center">
+                            <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
                                     <span class="number"> 1. </span>
                                 </span>

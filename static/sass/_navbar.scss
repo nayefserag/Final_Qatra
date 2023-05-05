@@ -3,6 +3,7 @@
 //============================= Start Navbar ====================================//
  .navbar{
     width: 100%;
+    height: 15vh;
     position: fixed;
     top: 0;
     margin: 0;
@@ -14,6 +15,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+            transform: translateY(-4px);
+            cursor: pointer;
+        }
         p{
             color: var(--dark);
             font-style: normal;
@@ -90,6 +95,14 @@
             }
         }
     }
+    #icon{
+        width: 50px;
+        cursor: pointer;
+    }
+    .dark-mode{
+        width: 50px;
+        cursor: pointer;
+    }
  }
 //============================= End Navbar ====================================//
 //============================= Start Media  ====================================//
@@ -98,8 +111,19 @@
         box-shadow: none;
         .container{
             padding: 0;
+            flex-direction: row-reverse;
             .navbar-toggler{
-                margin-left: 15px;
+                margin-right: 21px;
+                img{
+                    transform: translateX(120px);
+                }
+            }
+            .navbar-brand{
+                margin: auto;
+                padding-left: 40px;
+                p{
+                    display: none;
+                }
             }
             .navbar-collapse{
                 padding: 0px;
@@ -113,6 +137,12 @@
                 form{
                     transform: translateX(-125px);
                 }
+            }
+            .dark-mode{
+                position: absolute;
+                padding-left: 15px;
+                top: 30px;
+                width: 50px;
             }
     }
 }
