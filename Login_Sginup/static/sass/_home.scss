@@ -213,7 +213,6 @@
         text-align: center;
     }
     .prosess_boxs{
-        // position: absolute;
         margin-right: 120px;
         .prosess_box{
             .process-step{
@@ -229,7 +228,7 @@
                 margin-top: 35px;
                 padding-right: 15px;
                 .title{
-                    font-size: 22px;
+                    font-size: 20px;
                     color: var(--pink);
                 }
                 p{
@@ -251,45 +250,23 @@
         }
         .prosess_boxs{
             margin-right: 0px;
-            .process-info{
-                .title{
-                    font-size: 20px;
-                }
-                p{
-                    width: 370px;
-                    max-width: 305px;
-                }
-            }
-        }
-    }
-}
-@media (max-width:992px){
-    .donation__prosess{
-        .header{
-            font-size: 30px;
-        }
-        
-        .prosess_boxs{
-            margin-right: 0px;
             .prosess_box{
-                .process-step{
-                    span{
-                        font-size: 60px;
-                    }
-                }
                 .process-info{
+                    .process-step{
+                        span{
+                            font-size: 65px;
+                        }
+                    }
                     .title{
-                        font-size: 16px;
-                        color: var(--pink);
+                        font-size: 22px;
                     }
                     p{
                         width: 370px;
-                        max-width:290px;
-                        font-size: 14px;
+                        max-width: 305px;
                     }
                 }
-            }
         }
+    }
     }
 }
 //============================= End Media donation prosess====================================//
