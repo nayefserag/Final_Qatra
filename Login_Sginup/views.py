@@ -26,6 +26,22 @@ def extract_keywords(request):
 def home(request):
      return render(request ,'Home.html')
 
+# def login(request):
+#     if request.method == 'POST':
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         user = authenticate(request, username=username, password=password)
+#         if user is not None:
+#             login(request, user)
+#             return redirect('home')
+#         else:
+#             context = {'error': 'Invalid username or password' }
+#             return render(request, 'login.html', context)
+#     else:
+#         return render(request, 'login.html')
+
+
+
 def Sginup(request):
     if request.method == "POST":
         form = UserRegistrationForm(request.POST)
