@@ -70,7 +70,7 @@
         }
         .carousel-caption{
             h3{
-                font-size: 28px;
+                font-size: 26px;
                 padding-bottom: 20px;
             }
             p{
@@ -88,7 +88,7 @@
         }
         .carousel-caption{
             h3{
-                font-size: 28px;
+                font-size: 26px;
                 padding-bottom: 20px;
             }
             p{
@@ -216,7 +216,7 @@
         margin-right: 120px;
         .prosess_box{
             .process-step{
-                span{
+                .number{
                     font-size: 80px;
                     font-weight: 900;
                     color: #5c5c74;
@@ -249,20 +249,21 @@
             font-size: 30px;
         }
         .prosess_boxs{
-            margin-right: 0px;
+            margin-right: 0;
             .prosess_box{
                 .process-info{
                     .process-step{
-                        span{
+                        .number{
                             font-size: 65px;
                         }
                     }
                     .title{
-                        font-size: 22px;
+                        font-size: 18px;
+                        padding-bottom: 10px;
                     }
                     p{
                         width: 370px;
-                        max-width: 305px;
+                        max-width: 290px;
                     }
                 }
         }
@@ -272,7 +273,9 @@
 //============================= End Media donation prosess====================================//
 //============================= Start section donation order==================================//
 .donation__order{
+    position: relative;
     .content{
+        position: relative;
        transform: translateY(65px);
        p{
         max-width: 500px;
@@ -287,11 +290,15 @@
         }
     }
     }
+    .image{
+        position: relative;
+    }
 }
 //============================= End section donation order====================================//
 //============================= Start Media donation order ====================================//
 @media (max-width:$mobile){
   .donation__order{
+    transform: translateY(450px);
     .header{
         font-size: 30px;
     }
@@ -316,8 +323,9 @@
 //============================= End Media donation order ====================================//
 //============================= Start section donation location==================================//
 .donation__location{
+    position: relative;
     .image_location{
-        width: 50%;
+        // width: 50%;
         height: 100%;
         position: relative;
         img{
@@ -328,6 +336,7 @@
         }
     }
     .content_location{
+        position: relative;
         padding-top: 80px;
         h3{
             i{
@@ -351,17 +360,18 @@
 //============================= Start Media donation location ====================================//
 @media (max-width:767px){
     .donation__location{
+        position: relative;
+        transform: translateY(590px);
         .image_location{
             img{
                 height: 345px;
                 top: 0px;
-                left: 45%;
             }
         }
         .content_location{
             padding-top: 0px;
             h3{
-                font-size:25px;
+                font-size:22px;
                 i{
                     font-size: 25px;
                 }
@@ -371,32 +381,14 @@
             }
         }
     }
-}
-@media (max-width:991px){
-    .donation__location{
-        .image_location{
-            img{
-                height: 345px;
-                top: 0px;
-            }
-        }
-        .content_location{
-            padding-top: 100px;
-            h3{
-                font-size: 20px;
-                i{
-                    font-size: 20px;
-                }
-            }
-            p{
-                font-size: 12px;
-            }
-        }
+    .location2{
+        top: 200px;
     }
 }
 //============================= End Media donation location ====================================//
 //============================= Start section donation time==================================//
 .donation__time{
+    position: relative;
     .donationTime_boxs{
     .content_time{
         margin-top: 80px;
@@ -424,12 +416,14 @@
 //============================= Start Media donation time ====================================//
 @media (max-width:$mobile){
     .donation__time{
-        margin: 100px 0;
+        position: relative;
+        top: 290px;
+        transform: translateY(450px);
         .donationTime_boxs{
         flex-direction: column-reverse;
         .image_time{
             img{
-                height: 310px;
+                height: 260px;
                 right: -55px;
             }
         }
@@ -449,27 +443,7 @@
     }
 }
 }
-@media (max-width:$iPad){
-    .donation__time{
-        margin: 100px 0;
-        .donationTime_boxs{
-        .content_time{
-            margin-top: 0;
-            padding-top: 100px;
-            h3{
-                font-size:25px;
-                i{
-                    font-size: 25px;
-                }
-            }
-            p{
-                font-size: 12px;
-            }
-        }
-    }
-}
-}
-  //============================= End Media donation time ====================================//
+//============================= End Media donation time ====================================//
 //============================= Start section donation steps==================================//
 .donation__steps{
     margin: 25px 0;
@@ -480,6 +454,7 @@
         margin:20px auto;
     }
     .steps_box{
+        position: relative;
         margin: 15px 0;
         p{
             margin-right: 10px;
@@ -490,6 +465,7 @@
             }
         }
         .step_shape{
+            position: relative;
             span{
                 position: absolute;
                 font-weight: 600;
@@ -515,6 +491,8 @@
 //============================= Start Media donation steps====================================//
 @media (max-width:$mobile){
     .donation__steps{
+        position: relative;
+        top: 820px;
         .header{
             font-size: 30px;
         }
@@ -562,6 +540,9 @@
 //============================= Start Media donation information ====================================//
 @media (max-width:$mobile){
     .donation__information{
+    position: relative;
+    top: 820px;
+
         .header{
             font-size: 30px;
         }
@@ -643,6 +624,8 @@
 //============================= start Media ====================================//
 @media (max-width:$mobile){
     .footer{
+        position: relative;
+        bottom: -815px;
         p{
             font-size: 12px;
             font-weight: 500;

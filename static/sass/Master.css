@@ -78,7 +78,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -178,7 +178,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -244,8 +244,8 @@ a {
 .navbar .navbar-toggler:focus {
   box-shadow: none;
 }
-.navbar .navbar-collapse .navbar-nav {
-  padding-right: 55px;
+.navbar .navbar-collapse {
+  background-color: var(--white);
 }
 .navbar .navbar-collapse .navbar-nav .navbar_item {
   margin: 0px 20px;
@@ -294,81 +294,27 @@ a {
   color: var(--pink);
   font-size: 20px;
 }
-.navbar .navbar-collapse form .popup {
-  position: absolute;
-  background: var(--white);
-  border-radius: 5px;
-  top: 0;
-  left: 18%;
-  transform: translate(50%, 50%) scale(0.1);
-  width: 467px;
-  height: 345px;
-  visibility: hidden;
-  transition: transform 0.4s, top 0.4s;
-}
-.navbar .navbar-collapse form .popup i {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  color: var(--pink);
-  font-size: 25px;
-  cursor: pointer;
-}
-.navbar .navbar-collapse form .popup img {
-  width: 150px;
-}
-.navbar .navbar-collapse form .popup .pop-header {
-  color: var(--pink);
-  font-weight: 600;
-  font-size: 40px;
-}
-.navbar .navbar-collapse form .popup .pop-paragraph {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 26px;
-  width: 235px;
-  height: 52px;
-  margin: 20px auto;
-}
-.navbar .navbar-collapse form .popup button {
-  background: var(--pink);
-  border-color: var(--pink);
-}
-.navbar .navbar-collapse form .popup button a {
-  color: var(--white);
-}
-.navbar .navbar-collapse form .open-popup {
-  visibility: visible;
-  top: 50%;
-  transform: translate(50%, 50%) scale(1);
-}
-.navbar .navbar-collapse form .blur-background {
-  filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-}
 
-@media (max-width: 767px) {
-  .navbar .navbar-collapse {
-    padding-right: 20px;
-    height: 83vh;
-  }
-  .navbar .navbar-collapse .navbar-nav .navbar_item {
-    margin: 20px 0;
-  }
-  .navbar .navbar-collapse form {
-    display: none;
-  }
-}
 @media (max-width: 991px) {
-  .navbar .navbar-collapse {
-    height: 72vh;
+  .navbar {
+    box-shadow: none;
   }
-  .navbar .navbar-collapse .navbar-nav .navbar_item {
-    margin: 25px auto;
+  .navbar .container {
+    padding: 0;
   }
-  .navbar .navbar-collapse form {
-    display: none;
+  .navbar .container .navbar-toggler {
+    margin-left: 15px;
+  }
+  .navbar .container .navbar-collapse {
+    padding: 0px;
+    height: 70vh;
+    margin-top: -11px;
+  }
+  .navbar .container .navbar-collapse .navbar-nav .navbar_item {
+    margin: 30px auto;
+  }
+  .navbar .container .navbar-collapse form {
+    transform: translateX(-125px);
   }
 }
 * {
@@ -437,7 +383,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -532,7 +478,7 @@ a {
     height: 45vh;
   }
   .carousel .carousel-item .carousel-caption h3 {
-    font-size: 28px;
+    font-size: 26px;
     padding-bottom: 20px;
   }
   .carousel .carousel-item .carousel-caption p {
@@ -544,7 +490,7 @@ a {
     height: 45vh;
   }
   .carousel .carousel-item .carousel-caption h3 {
-    font-size: 28px;
+    font-size: 26px;
     padding-bottom: 20px;
   }
   .carousel .carousel-item .carousel-caption p {
@@ -556,6 +502,7 @@ a {
   position: relative;
 }
 .donation .content {
+  position: relative;
   transform: translateY(65px);
 }
 .donation .content p {
@@ -577,6 +524,9 @@ a {
 }
 .donation .content .submit_btn a:active, .donation .content .submit_btn a:focus {
   color: var(--dark);
+}
+.donation .video {
+  position: relative;
 }
 .donation .video video {
   border-radius: 40px;
@@ -637,11 +587,11 @@ a {
   }
 }
 .donation__prosess {
+  position: relative;
   background: url("../images/dots.webp"), no-repeat;
   background-size: cover;
   width: 100%;
   height: 100%;
-  position: relative;
   margin: 50px auto;
   top: 0;
 }
@@ -651,7 +601,7 @@ a {
 .donation__prosess .prosess_boxs {
   margin-right: 120px;
 }
-.donation__prosess .prosess_boxs .prosess_box .process-step span {
+.donation__prosess .prosess_boxs .prosess_box .process-step .number {
   font-size: 80px;
   font-weight: 900;
   color: #5c5c74;
@@ -663,7 +613,7 @@ a {
   padding-right: 15px;
 }
 .donation__prosess .prosess_boxs .prosess_box .process-info .title {
-  font-size: 22px;
+  font-size: 20px;
   color: var(--pink);
 }
 .donation__prosess .prosess_boxs .prosess_box .process-info p {
@@ -679,18 +629,25 @@ a {
     font-size: 30px;
   }
   .donation__prosess .prosess_boxs {
-    margin-right: 0px;
+    margin-right: 0;
+  }
+  .donation__prosess .prosess_boxs .prosess_box .process-info .process-step .number {
+    font-size: 65px;
+  }
+  .donation__prosess .prosess_boxs .prosess_box .process-info .title {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .donation__prosess .prosess_boxs .prosess_box .process-info p {
+    width: 370px;
+    max-width: 290px;
   }
 }
-@media (max-width: 992px) {
-  .donation__prosess .header {
-    font-size: 30px;
-  }
-  .donation__prosess .prosess_boxs {
-    margin-right: 0px;
-  }
+.donation__order {
+  position: relative;
 }
 .donation__order .content {
+  position: relative;
   transform: translateY(65px);
 }
 .donation__order .content p {
@@ -702,8 +659,14 @@ a {
 .donation__order .content button a:active, .donation__order .content button a:focus {
   color: var(--dark);
 }
+.donation__order .image {
+  position: relative;
+}
 
 @media (max-width: 767px) {
+  .donation__order {
+    transform: translateY(450px);
+  }
   .donation__order .header {
     font-size: 30px;
   }
@@ -722,8 +685,10 @@ a {
     transform: translateY(10px);
   }
 }
+.donation__location {
+  position: relative;
+}
 .donation__location .image_location {
-  width: 50%;
   height: 100%;
   position: relative;
 }
@@ -734,6 +699,7 @@ a {
   animation: InfiniteTopAnimation 3s ease-in-out infinite;
 }
 .donation__location .content_location {
+  position: relative;
   padding-top: 80px;
 }
 .donation__location .content_location h3 i {
@@ -752,41 +718,32 @@ a {
   }
 }
 @media (max-width: 767px) {
+  .donation__location {
+    position: relative;
+    transform: translateY(590px);
+  }
   .donation__location .image_location img {
     height: 345px;
     top: 0px;
-    left: 45%;
   }
   .donation__location .content_location {
     padding-top: 0px;
   }
   .donation__location .content_location h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .donation__location .content_location h3 i {
     font-size: 25px;
   }
   .donation__location .content_location p {
     font-size: 12px;
+  }
+  .location2 {
+    top: 200px;
   }
 }
-@media (max-width: 991px) {
-  .donation__location .image_location img {
-    height: 345px;
-    top: 0px;
-  }
-  .donation__location .content_location {
-    padding-top: 100px;
-  }
-  .donation__location .content_location h3 {
-    font-size: 20px;
-  }
-  .donation__location .content_location h3 i {
-    font-size: 20px;
-  }
-  .donation__location .content_location p {
-    font-size: 12px;
-  }
+.donation__time {
+  position: relative;
 }
 .donation__time .donationTime_boxs .content_time {
   margin-top: 80px;
@@ -809,13 +766,15 @@ a {
 
 @media (max-width: 767px) {
   .donation__time {
-    margin: 100px 0;
+    position: relative;
+    top: 290px;
+    transform: translateY(450px);
   }
   .donation__time .donationTime_boxs {
     flex-direction: column-reverse;
   }
   .donation__time .donationTime_boxs .image_time img {
-    height: 310px;
+    height: 260px;
     right: -55px;
   }
   .donation__time .donationTime_boxs .content_time {
@@ -832,24 +791,6 @@ a {
     font-size: 12px;
   }
 }
-@media (max-width: 991px) {
-  .donation__time {
-    margin: 100px 0;
-  }
-  .donation__time .donationTime_boxs .content_time {
-    margin-top: 0;
-    padding-top: 100px;
-  }
-  .donation__time .donationTime_boxs .content_time h3 {
-    font-size: 25px;
-  }
-  .donation__time .donationTime_boxs .content_time h3 i {
-    font-size: 25px;
-  }
-  .donation__time .donationTime_boxs .content_time p {
-    font-size: 12px;
-  }
-}
 .donation__steps {
   margin: 25px 0;
   display: flex;
@@ -860,10 +801,14 @@ a {
   margin: 20px auto;
 }
 .donation__steps .steps_box {
+  position: relative;
   margin: 15px 0;
 }
 .donation__steps .steps_box p {
   margin-right: 10px;
+}
+.donation__steps .steps_box .step_shape {
+  position: relative;
 }
 .donation__steps .steps_box .step_shape span {
   position: absolute;
@@ -885,6 +830,10 @@ a {
 }
 
 @media (max-width: 767px) {
+  .donation__steps {
+    position: relative;
+    top: 820px;
+  }
   .donation__steps .header {
     font-size: 30px;
   }
@@ -918,6 +867,10 @@ a {
 }
 
 @media (max-width: 767px) {
+  .donation__information {
+    position: relative;
+    top: 820px;
+  }
   .donation__information .header {
     font-size: 30px;
   }
@@ -986,6 +939,10 @@ a {
 }
 
 @media (max-width: 767px) {
+  .footer {
+    position: relative;
+    bottom: -815px;
+  }
   .footer p {
     font-size: 12px;
     font-weight: 500;
@@ -1087,7 +1044,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -1270,7 +1227,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -1448,7 +1405,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -1638,7 +1595,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -1806,7 +1763,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -1955,7 +1912,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -2131,7 +2088,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -2323,7 +2280,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -2449,7 +2406,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -2613,7 +2570,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;
@@ -2790,7 +2747,7 @@ a {
 
 .header {
   color: var(--pink);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   display: block;
   width: -moz-fit-content;

@@ -38,7 +38,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <il class="navbar_item">
-                    <a href="#carouselExampleCaptions" class="navbar__link active">الرئيسية</a>
+                    <a href="#carouselExampleCaptions" class="navbar__link">الرئيسية</a>
                 </il>
                 <il class="navbar_item">
                     <a href="#donation" class="navbar__link">اريد التبرع </a>
@@ -56,7 +56,7 @@
                     <a href="#who__us" class="navbar__link">من نحن </a>
                 </il>
             </ul>
-  
+
                         <!-- يعد تسجيل الدخول -->
                         {% if user.is_authenticated %}
                             <form class="submit_btm me-auto">
@@ -80,13 +80,11 @@
                            </a>
                         </form>
                     {% endif %}
-
           </div>
         </div>
     </nav>
     <!---=========================== End Navbar =====================================--->
     <!---=========================== Start Home =====================================--->
-
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-interval="50000"data-bs-ride="carousel">
         <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -129,10 +127,8 @@
         <span class="visually-hidden">Next</span>
         </button>
     </div>
-
     <!---=========================== End Home =====================================--->
-    <!---=========================== Start donation ===============================--->  
-
+    <!---=========================== Start donation ===============================--->
     <section class="donation " id="donation">
         <div class="container">
             <div class="row">
@@ -153,15 +149,14 @@
                             
                             اريد التبرع
                         </button>
-                     </a>  
+                     </a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 video">
-                    <video src="{% static 'video/قطرة ‑ Made with FlexClip (1).mp4' %}" loop autoplay muted width="100%" height="100%"></video>
+                    <video src="{% static 'video/قطرة ‑ Made with FlexClip (1).mp4' %}" loop autoplay muted width="100%" height="100%' %"></video>
                 </div>
             </div>
         </div>
-    </section> 
-
+    </section>
     <!---=========================== End donation =====================================--->
     <!---=========================== start donation prosess============================--->
 
@@ -175,7 +170,7 @@
     
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-10 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 1. </span>
+                                    <span> 1. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -190,7 +185,7 @@
       
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 2. </span>
+                                    <span> 2. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -205,7 +200,7 @@
      
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 3. </span>
+                                    <span> 3. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -220,7 +215,7 @@
      
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 4. </span>
+                                    <span> 4. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -235,7 +230,7 @@
      
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 5. </span>
+                                    <span> 5. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -250,7 +245,7 @@
     
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 6. </span>
+                                    <span> 6. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -264,7 +259,7 @@
     
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 7. </span>
+                                    <span> 7. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -280,7 +275,7 @@
     
                             <div class="prosess_box col-lg-5 col-md-5 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 8. </span>
+                                    <span> 8. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -295,7 +290,7 @@
     
                             <div class="prosess_box col-lg-12 col-md-12 col-sm-8 d-flex justify-content-center align-items-center">
                                 <span class="process-step">
-                                    <span class="number"> 9. </span>
+                                    <span> 9. </span>
                                 </span>
                                 <div class="process-info">
                                     <h4 class="title">
@@ -317,7 +312,7 @@
     <!---=========================== End donation prosess=====================================--->
     <!---=========================== start donation order===================================--->
 
-    <section class="donation__order mt-5" id="donation__prosess">
+    <!-- <section class="donation__order mt-5 mb-5 " id="donation__prosess">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 content">
@@ -328,93 +323,27 @@
                         ,عن طريق الضغط على زر  (تبرع) ,و ملئ  استمارة الخاصه بتبرع ,
                         وسوف نرسل لك اقرب مستشفى بحاجه اليك   
                     </p>
-                    <a href="{% url 'donate3' %}">
+                   <a href="{% url 'donate3' %}">
                         <button class="btn submit_btn" type="submit">
                             طلب متبرع
                         </button>
-                    </a>     
+                    </a>   
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 image">
                     <img class="w-100 rounded-3" src="{% static 'images/iStock-1266746889.jpg' %}">
                 </div>
             </div>
         </div>
-    </section>
-
+    </section> -->
 
     <!---=========================== End donation order=====================================--->
-    <!---=========================== start donation location=====================================--->
-
-    <section class="donation__location d-flex align-items-center justify-content-center" id="donation__location">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-8 m-auto image_location">
-                    <img src="{% static 'images/localisation.svg' %}">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 content_location">
-                    <h3 class="header">
-                        <i class="fa-solid fa-magnifying-glass-location"></i>
-                        البحث عن متبرعين في منطقتك</h3>
-                    <p class="paragraph">
-                        لا تضيع وقتك في البحث عن متبرعي الدم، فتطبيقنا يوفر لك هذه الخدمة بشكل سريع وبدون تكلفة . حيث يتضمن التطبيق نظامًا ذكيًا يمكنه العثور على أقرب متبرعي الدم في المنطقة. كما يتميز نظام التبرع بالدم لدينا بالكفاءة العالية، فهو يعمل بشكل آلي ويتم التعامل مع طلبات نقل الدم بكل سهولة وفعالية. لذلك، يمكنك الاعتماد على تطبيقنا في أي وقت تحتاج فيه إلى نقل الدم. 
-                    </p> 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!---=========================== End donation location=====================================--->
-    <!---=========================== start donation time=====================================--->
-
-    <section class="donation__time d-flex align-items-center justify-content-center" id="donation__time">
-        <div class="container">
-            <div class="row donationTime_boxs">
-                <div class="col-lg-6 col-md-6 col-sm-12 content_time">
-                    <h3 class="header">
-                        <i class="fa-regular fa-clock"></i>
-                        الإجابة على حالات الطوارئ.
-                    </h3>
-                    <p class="paragraph">
-                        فور رفع طلب جديد لنقل الدم، يتم توجيهه بين متبرعي الدم المتطوعين في المنطقة المحلية.  و نحن نعلم أن الوقت مهم ! لذلك، نحن نبقيك على اطلاع عبر إرسال إشعارات فورية مباشرة إليك عن طريق الرسائل النصية (SMS) أو عن طريق موقعنا.
-                    </p> 
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 m-auto image_time">
-                    <img src="{% static 'images/connect.svg' %}">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!---=========================== End donation time=====================================--->
-    <!---=========================== start donation location=====================================--->
-
-    <section class="donation__location location2 d-flex align-items-center justify-content-center" id="donation__location">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 m-auto image_location">
-                    <img src="{% static 'images/savelife.svg' %}">
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 content_location">
-                    <h3 class="header">
-                        <i class="fa-solid fa-award"></i>
-                        أنت بطل شخص ما.
-                    </h3>
-                    <p class="paragraph">
-                        أنت بطل شخص ما. في غضون دقائق قليلة، يمكنك أن تصبح بطلاً لشخص غير معروف ولكن مهم بشكل كبير. إن إنقاذ حياة شيء نبيل يبدأ بسهولة شديدة. التبرع بالدم أو التبرع بالمال، كل شكل من أشكال المساهمة التي تقدمها مهم وثمين وأساسي في مهمتنا المشتركة لإنقاذ الأرواح.
-                    </p> 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!---=========================== End donation location=====================================--->
     <!---=========================== start donation steps===================================--->
 
-    <section class="donation__steps text-center" id="donation__steps">
+    <!-- <section class="donation__steps text-center " id="donation__steps">
         <div class="container">
             <div class="row">
                 <h3 class="header">خطوات التبرع بالدم </h3>
-                <div class="steps_box col-lg-12 col-md-12 col-sm-12 d-flex align-items-center justify-content-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 steps_box d-flex align-items-center justify-content-center">
                     <div class="step_shape">
                         <span>1</span>
                         <img class="img" src="{% static 'images/form 1.png' %}" alt="">
@@ -433,17 +362,21 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 steps_box d-flex align-items-center justify-content-center">
                     <div class="step_shape">
-                        <img class="img"  src="{% static 'images/blood-bag 1.png' %}" alt="">
+                        <img class="img" src="{% static 'images/blood-bag 1.png' %}" alt="">
                         <span>3</span>
                         <img class="Ellipse" src="{% static 'images/Ellipse 1.png' %}" alt="">
                     </div>
-                    <p>الفحص السريري لتحديد الوزن , وقياس 
-                        ضغط الدم ودرجه الحراره والنبض ونبسه الهيموجلبين
+                    <p>
+                        الفحص السريري لتحديد الوزن 
+                    <br>
+                        وقياس ضغط الدم ودرجه الحراره
+                        <br>
+                         والنبض ونبسه الهيموجلبين
                     </p>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 steps_box d-flex align-items-center justify-content-center">
                     <div class="step_shape">
-                        <img class="img"  src="{% static 'images/check-up 1.png' %}" alt="">
+                        <img class="img" src="{% static 'images/check-up 1.png' %}" alt="">
                         <span>4</span>
                         <img class="Ellipse" src="{% static 'images/Ellipse 1.png' %}" alt="">
                     </div>
@@ -451,7 +384,7 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 steps_box d-flex align-items-center justify-content-center">
                     <div class="step_shape">
-                        <img class="img"  src="{% static 'images/blood-bank 1.png' %}" alt="">
+                        <img class="img" src="{% static 'images/blood-bank 1.png' %}" alt="">
                         <span>5</span>
                         <img class="Ellipse" src="{% static 'images/Ellipse 1.png' %}" alt="">
                     </div>
@@ -459,64 +392,88 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!---=========================== End donation steps=====================================--->
-    <!---=========================== start donation information=============================--->
+    <!---=========================== start donation location=====================================--->
 
-    <section class="donation__information mt-5 mb-5" id="donation__information">
+    <!-- <section class="donation__location d-flex align-items-center justify-content-center" id="donation__location">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3 class="header m-auto">معلومات عن تبرع بدم </h3>
-                    <dl>
-                        <dt>التبرع بالدم:</dt>
-                        <dd>
-                            هو إجراء طبي تطوعي يتم بنقل الدم أو أحد مركباته من شخص سليم معافى إلى شخص مريض يحتاج للدم. وهذا الإجراء يحتاج إليه الملايين من الناس كل عام؛
-                            فيستخدم أثناء الجراحة أو الحوادث أو بعض الأمراض التي تتطلب نقل بعض مكونات الدم. أنواع التبرع بالدم:• الدم الكامل: هذا هو النوع الأكثر شيوعًا في عمليات التبرع بالدم؛
-                             حيث يشمل جميع مكونات الدم (الخلايا الحمراء والبلازما والصفائح الدموية)..• الصفائح الدموية.• البلازما.• خلايا الدم الحمراء.
-                        </dd>
-                        <dt>أهمية التبرع بالدم:</dt>
-                        <dd>
-                            عملية نقل الدم من العمليات التي تسهم في إنقاذ الأرواح؛ فيُعطى في مثل هذه الحالات:• عند حدوث مضاعفات للسيدات الحوامل، مثل حالات النزف قبل الولادة أو خلالها أو بعدها.• للمرضى أثناء العمليات الجراحية مثل عمليات القلب، الأوعية الدموية، جراحة زراعة الأعضاء وغيرها.• للمصابين بأمراض الدم.• للمصابين في الحوادث.• مرضى السرطان
-                        </dd>
-                        <dt>شروط التبرع بالدم:</dt>
-                        <dd>
-                            أن يكون المتبرع بصحة جيدة ولا يعاني أي أمراض معدية.• أن يكون عمر المتبرع من 18-65 سنة.• يجب ألا يقل وزن المتبرع عن 50 كجم.• أن تكون نسبة الهيموجلوبين للرجال من 14- 17 جم، وللنساء من 12-14 جم.• أن يكون النبض بين 50-100 في الدقيقة.• ألا تزيد درجة الحرارة عن 37 درجة مئوية.• أن يكون معدل ضغط الدم أقل من120/80 ملم زئبق.
-                        </dd>
-                        <dt>كمية الدم المتبرع به:</dt>
-                        <dd>
-                            يمكن للشخص البالغ الذي يتمتع بصحة جيدة أن يتبرع بحوالي (450-500 مل) من دمه دون أي مخاوف أو أخطار على صحته، ويمكنه التبرع كل شهرين بحيث لا يزيد عدد مرات التبرع على 5 مرات في السنة
-                        </dd>
-                        <dt>الحالات التي لا يسمح لها بالتبرع بالدم:</dt>
-                        <dd>
-                            أقل من عمر 18 سنة.• المصابون بأمراض معدية مثل (الإيدز، التهاب الكبد ب وج، الزهري، الملاريا)• المصابون بأمراض الدم الوراثية.• المصابون بفقر الدم الحاد.• المصابون بالأمراض المزمنة، مثل السكري، ارتفاع ضغط الدم، السرطان.
-                        </dd>
-                        <dt>نصائح بعد التبرع بالدم:</dt>
-                        <dd>
-                            نصائح بعد التبرع بالدم:• بعد التبرع تأخذ قسطًا من الراحة وتتناول وجبة خفيفة وبعد 10 -15 دقيقة يمكنك مغادرة مكان التبرع• تجنب النشاط البدني الشاق أو رفع الأحمال الثقيلة لمدة 5 ساعات بعد التبرع.• عند الشعور بـ"الدوخة" ينصح بالاستلقاء علي الظهر مع رفع القدمين.• الإكثار من شرب السوائل.
-                        </dd>
-                    </dl>
+                <div class="col-lg-6 col-md-6 col-sm-12 m-auto image_location">
+                    <img src="{% static 'images/localisation.svg' %}">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 content_location">
+                    <h3 class="header">
+                        <i class="fa-solid fa-magnifying-glass-location"></i>
+                        البحث عن متبرعين في منطقتك</h3>
+                    <p class="paragraph">
+                        لا تضيع وقتك في البحث عن متبرعي الدم، فتطبيقنا يوفر لك هذه الخدمة بشكل سريع وبدون تكلفة . حيث يتضمن التطبيق نظامًا ذكيًا يمكنه العثور على أقرب متبرعي الدم في المنطقة. كما يتميز نظام التبرع بالدم لدينا بالكفاءة العالية، فهو يعمل بشكل آلي ويتم التعامل مع طلبات نقل الدم بكل سهولة وفعالية. لذلك، يمكنك الاعتماد على تطبيقنا في أي وقت تحتاج فيه إلى نقل الدم. 
+                    </p> 
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!---=========================== End donation information=====================================--->
+    <!---=========================== End donation location=====================================--->
+    <!---=========================== start donation time=====================================--->
+
+    <!-- <section class="donation__time d-flex align-items-center justify-content-center" id="donation__time">
+        <div class="container">
+            <div class="row donationTime_boxs">
+                <div class="col-lg-6 col-md-6 col-sm-12 content_time">
+                    <h3 class="header">
+                        <i class="fa-regular fa-clock"></i>
+                        الإجابة على حالات الطوارئ.
+                    </h3>
+                    <p class="paragraph">
+                        فور رفع طلب جديد لنقل الدم، يتم توجيهه بين متبرعي الدم المتطوعين في المنطقة المحلية.  و نحن نعلم أن الوقت مهم ! لذلك، نحن نبقيك على اطلاع عبر إرسال إشعارات فورية مباشرة إليك عن طريق الرسائل النصية (SMS) أو عن طريق موقعنا.
+                    </p> 
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 m-auto image_time">
+                    <img src="{% static 'images/connect.svg' %}">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!---=========================== End donation time=====================================--->
+    <!---=========================== start donation location=====================================--->
+
+    <!-- <section class="donation__location d-flex align-items-center justify-content-center" id="donation__location">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 m-auto image_location">
+                    <img src="{% static 'images/savelife.svg' %}">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 content_location">
+                    <h3 class="header">
+                        <i class="fa-solid fa-award"></i>
+                        أنت بطل شخص ما.
+                    </h3>
+                    <p class="paragraph">
+                        أنت بطل شخص ما. في غضون دقائق قليلة، يمكنك أن تصبح بطلاً لشخص غير معروف ولكن مهم بشكل كبير. إن إنقاذ حياة شيء نبيل يبدأ بسهولة شديدة. التبرع بالدم أو التبرع بالمال، كل شكل من أشكال المساهمة التي تقدمها مهم وثمين وأساسي في مهمتنا المشتركة لإنقاذ الأرواح.
+                    </p> 
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!---=========================== End donation location=====================================--->
     <!---=========================== start footer===================================--->
-
+<!-- 
     <footer class="footer" id="who__us">
         <div class="container">
             <div class="row">
-                <div class="footer__row rowOne col-lg-12 col-md-12 col-sm-12">
+                <div class="footer__row col-lg-12 col-md-12 col-sm-12">
                     <h4>من نحن ؟؟</h4>
                     <p>نحن مجموعة من الشباب نسعى جاهدين لـتوفير الدم بـشكل مستمر وآمن على صحة المريض والمتبرع بحيث يعمل جميع افراد الفريق بـتعاون وتنسيق عالٍ لـتوفير تجربة استخدام مريحة ومفيدة للـمستخدمين . </p>
                 </div>
-                <div class="footer__row rowTwo col-lg-12 col-md-12 col-sm-12 text-center">
+                <div class="footer__row col-lg-12 col-md-12 col-sm-12 text-center">
                     <h3>تواصل معانا : </h3>
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-facebook facebook"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin linkedin"></i></a></li>
                     </ul>
@@ -526,7 +483,8 @@
             </div>
         </div>
     </footer>
-
+ -->
+    
     <!---=========================== End footer=====================================--->
     <!---=========================== Jquery File =====================================--->
     <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>

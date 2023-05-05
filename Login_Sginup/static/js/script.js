@@ -5,22 +5,9 @@ ScrollReveal({
      duration:2000,
      delay:200
 });
-ScrollReveal().reveal('.navbar , .video, .donation__prosess , .image , .steps_box ', { origin:'top' });
-ScrollReveal().reveal('.content', { origin:'bottom' });
-ScrollReveal().reveal('.donation__information ', { origin:'right' });
-// ScrollReveal().reveal('.footer__row', { origin:'left' });
-////////////////////  pop Up Button  //////////////////////////
-let popup = document.getElementById("popup");
-function openPopup()
-{
-     popup.classList.add('open-popup');
-     document.body.classList.add('blur-background');
-}
-function closePopup()
-{
-     popup.classList.remove('open-popup');
-     document.body.classList.remove('blur-background');
-}
+ScrollReveal().reveal('.navbar , .video, .donation__prosess , .image , .steps_box ,.image_location ,.image_time , .prosess_box', { origin:'top' });
+ScrollReveal().reveal('.content , .content_location , .content_time', { origin:'bottom' });
+ScrollReveal().reveal('.donation__information', { origin:'right' });
 ////////////////////  scroll up btn  //////////////////////////
 let scrollBtn = document.querySelector(".scrollBtn");
 window.onscroll = function()

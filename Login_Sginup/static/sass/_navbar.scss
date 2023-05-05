@@ -1,7 +1,7 @@
 @import './resets';
 @import './globel';
 //============================= Start Navbar ====================================//
-.navbar{
+ .navbar{
     width: 100%;
     position: fixed;
     top: 0;
@@ -103,7 +103,7 @@
             }
             .navbar-collapse{
                 padding: 0px;
-                height: 58vh;
+                height: 70vh;
                 margin-top: -11px;
                 .navbar-nav{
                     .navbar_item{
@@ -111,7 +111,7 @@
                     }
                 }
                 form{
-                    display: none;
+                    transform: translateX(-125px);
                 }
             }
     }
