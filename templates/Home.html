@@ -69,6 +69,7 @@
                                 <a class="log-Out" href="{% url 'logout' %}" target="_self">
                                     <i class="fa-solid fa-right-to-bracket"></i>
                                 </a>
+                                <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}">
                             </form> 
                         {% else %}
                         <!-- قبل تسجيل الدخول -->
@@ -84,7 +85,7 @@
 
           </div>
           <!-- dark mode -->
-          <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}">
+          {% comment %} <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}"> {% endcomment %}
         </div>
     </nav>
     <!---=========================== End Navbar =====================================--->

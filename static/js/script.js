@@ -42,20 +42,21 @@ scrollBtn.onclick = function()
      });
 };
 ////////////////////  scroll up btn  //////////////////////////
-
+window.onload = function() {
 let icon = document.getElementById("icon");
 icon.onclick = function()
 {
      document.body.classList.toggle("dark-mode");
      if (document.body.classList.contains("dark-mode"))
      {
-           icon.src = "/Login_Sginup/static/images/sun.png";
+           icon.src = "/static/images/sun.png";
 
      }
      else
      {
 
-           icon.src = "/Login_Sginup/static/images/moon.gif";
+           icon.src = "/static/images/moon.gif";
 
      }
 };
+}

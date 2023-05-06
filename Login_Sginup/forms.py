@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm 
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator   
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from .models import *
 
 
@@ -49,3 +50,11 @@ class UserRegistrationForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         for k, v in self.Meta.labels.items():
             self[k].label = v
+class PasswordChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(widget=forms.PasswordInput(attrs={'autocomplete': 'current-password'}))
+    new_password1 = forms.CharField(label='New password', widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}), strip=False, help_text='Something Is wrong ')
+    new_password2 = forms.CharField(label='Confirm new password', widget=forms.PasswordInput(attrs={'autocomplete': 'new-password'}), strip=False)
+
+    class Meta:
+        model = User
+        fields ='__all__'
