@@ -55,6 +55,7 @@
                 <il class="navbar_item">
                     <a href="#who__us" class="navbar__link">من نحن </a>
                 </il>
+                {% comment %} <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}"> {% endcomment %}
             </ul>
   
                         <!-- يعد تسجيل الدخول -->
@@ -77,16 +78,16 @@
                             <a href="{% url 'login' %}" >
                                  <button type="button" id="submit_btn" class="btn submit_btn">
                                     تسجيل الدخول
-                                 </button>
-                                 
+                                </button>
+                               
                                 </a>
-                                <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}"> 
-                        </form>
+                            </form>
+                            
                     {% endif %}
-
+                   
           </div>
           <!-- dark mode -->
-           
+          <img class="dark-mode" id="icon" src="{% static 'images/moon.gif' %}">
         </div>
     </nav>
     <!---=========================== End Navbar =====================================--->
