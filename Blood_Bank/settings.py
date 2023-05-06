@@ -179,7 +179,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
-SITE_ID=2
+# SITE_ID=2
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_LOGOUT_ON_GET= True
 ACCOUNT_UNIQUE_EMAIL = True
@@ -222,4 +222,4 @@ DATE_INPUT_FORMATS = [
 ]
 
 ALLOWED_HOSTS = ['*']
-# SITE_ID = 9
+SITE_ID = 9
