@@ -38,25 +38,23 @@
                         </p>
                         <div class="col-sm-12 user-box">
                             <label>أسم المستخدم</label>
-                            <input class="input-form" type="username" name="username" id="id_username" required>
-                            {% if form.username.errors %}
-                             <small style="color: red">{{ form.username.errors }}</small>
-                             {% endif %}
+                            <input class="input-form" type="username" name="username" id="id_username" >
+
 
                              
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>كلمة المرور</label>
                           <a href="{% url 'password_reset' %}">نسيت كلمة المرور ؟</a>
-                            <input class="input-form" type="password" name="password" id="id_password" required>
+                            <input class="input-form" type="password" name="password" id="id_password" >
+                            {% if form.username.errors or firm.password.errors %}
+                            <small style="color: red"> كلمة المرور او اسم المسخدم خاطئ من فضلك أعد المحاولة مرة اخرى</small>
+                            {% endif %}
                         </div>
                         <div class="col-sm-12 user-box">
                             <input class="check" type="checkbox">
                             <label class="checkBox">تذكرني</label>
                         </div>
-                        {% if error %}
-                        <small style="color: red">Wrong info</small>
-                        {% endif %}
                         <div class="btn-box">
                             <button class="btn submit_btn" type="submit">تسجيل الدخول</button>  
                             
