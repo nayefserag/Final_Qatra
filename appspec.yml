@@ -12,10 +12,10 @@ hooks:
     - location: ./scripts/start-app.sh
       timeout: 300
       runas: ubuntu
-  ApplicationStop:
-    - location: ./scripts/stop-app.sh
-      timeout: 300
-      runas: ubuntu
+  # ApplicationStop:
+  #   - location: ./scripts/stop-app.sh
+  #     timeout: 300
+  #     runas: ubuntu
   ValidateService:
     - location: ./scripts/test-app.sh
       timeout: 300
