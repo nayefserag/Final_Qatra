@@ -90,7 +90,7 @@
                         <h3>اريد التبرع !</h3>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.blood_type.label }}  :</label>
-                            <select name="{{form.blood_type.name}}" class="form-select" aria-label="Default select example">
+                            <select name="{{form.blood_type.name}}" class="form-select" aria-label="Default select example" required>
             
                                 {% for value, label in form.blood_type.field.choices %}
                                  <option value="{{ value }}" {% if value == form.blood_type.value %}selected{% endif %}>{{ label }}</option>
@@ -99,13 +99,13 @@
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.location.label }}  :</label>
-                            <input class="input-form" type="text" name="{{ form.location.name }}" id="{{ form.location.id_for_label }}" value="{{ form.location.value|default:'' }}" >
+                            <input class="input-form" type="text" name="{{ form.location.name }}" id="{{ form.location.id_for_label }}" value="{{ form.location.value|default:'' }}" required>
 
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.date.label }}  : </label>
                             {% comment %} <input class="input-form" type="date" name="{{ form.date.name }}" id="{{ form.date.id_for_label }}" value="{{ form.date.value|default:'' }}" > {% endcomment %}
-                         <input class="input-form" type="date" name="{{ form.date.name }}" value="{{ form.date.value|date:'m-d-Y' }}">
+                         <input class="input-form" type="date" name="{{ form.date.name }}" value="{{ form.date.value|date:'m-d-Y' }}"required>
                         </div>
                         <div class="btn-box">
                             

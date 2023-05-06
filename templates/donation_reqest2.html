@@ -101,15 +101,15 @@
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.location.label }} :</label>
-                            <input class="input-form" type="text" name="{{ form.location.name }}" id="{{ form.location.id_for_label }}" value="{{ form.location.value|default:'' }}" >
+                            <input class="input-form" type="text" name="{{ form.location.name }}" id="{{ form.location.id_for_label }}" value="{{ form.location.value|default:'' }}" required>
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.drugs.label }}   : </label>
-                            <input class="input-form" type="text" name="{{ form.drugs.name }}" id="{{ form.drugs.id_for_label }}" value="{{ form.drugs.value|default:'' }}" >
+                            <input class="input-form" type="text" name="{{ form.drugs.name }}" id="{{ form.drugs.id_for_label }}" value="{{ form.drugs.value|default:'' }}" required>
                         </div>
                         <div class="col-sm-12 user-box">
                             <label>{{ form.Patient_Status.label }}  :</label>
-                            <input class="input-form" type="text" name="{{ form.Patient_Status.name }}" id="{{ form.Patient_Status.id_for_label }}" value="{{ form.Patient_Status.value|default:'' }}" >
+                            <input class="input-form" type="text" name="{{ form.Patient_Status.name }}" id="{{ form.Patient_Status.id_for_label }}" value="{{ form.Patient_Status.value|default:'' }}" required>
                         </div>
                         <div class="btn-box">
                             <button class="submit_btn donation-btn w-100" type="submit">ارسال الطلب</button>  
