@@ -213,3 +213,5 @@ DATE_INPUT_FORMATS = [
 
 ALLOWED_HOSTS = ['*']
 SITE_ID = 9
+
+CSRF_TRUSTED_ORIGINS = ['https://qatra.cardigoo.com']
