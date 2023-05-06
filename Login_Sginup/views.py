@@ -49,11 +49,11 @@ def Sginup(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             try:
+                form.save()
                 username = form.cleaned_data.get('username')
                 password = form.cleaned_data.get('password1')
                 user = authenticate(request, username=username, password=password)
                 login(request, user)
-                form.save()
                 return redirect('home')
             except:
                 form = UserRegistrationForm()
