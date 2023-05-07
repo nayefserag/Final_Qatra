@@ -47,10 +47,10 @@ Our [Demo](https://drive.google.com/open?id=1BOn5Aa7XsZoh1dGMjPg7FnwjIZmeH6pJ&au
 ## Screenshots
 
 
-<p align="center"> <img src="static/screenshots/1.png" width="550" ></p>
+<p align="center"> <img src="static/screenshots/1.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/2.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/2.png" width="850" ></p>
 
 
 <p align="center"><img src="static/screenshots/3.png" width="850" ></p>
