@@ -53,28 +53,28 @@ Our [Demo](https://drive.google.com/open?id=1BOn5Aa7XsZoh1dGMjPg7FnwjIZmeH6pJ&au
 <p align="center"><img src="static/screenshots/2.png" width="550" ></p>
 
 
-<p align="center"><img src="static/screenshots/3.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/3.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/4.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/4.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/5.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/5.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/6.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/6.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/7.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/7.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/8.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/8.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/9.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/9.png" width="850" ></p>
 
 
-<p align="center"><img src="static/screenshots/10.png" width="550" ></p>
+<p align="center"><img src="static/screenshots/10.png" width="850" ></p>
 
 ## Logo
 <p align="center">
