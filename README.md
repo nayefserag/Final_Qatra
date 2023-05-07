@@ -44,10 +44,6 @@ To deploy this project run
 Our [Demo](https://drive.google.com/open?id=1BOn5Aa7XsZoh1dGMjPg7FnwjIZmeH6pJ&authuser=nayfserag5%40gmail.com&usp=drive_fs) Video
 
 
-##Presentation
-
-Our [Presentation](https://www.canva.com/design/DAFfK3zh0Hc/6HOkhFJgVXwXCPMXk5UZlA/view?  utm_content=DAFfK3zh0Hc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) On canva
-
 ## Screenshots
 
 
