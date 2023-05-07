@@ -46,39 +46,39 @@ Our [Demo](https://drive.google.com/open?id=1BOn5Aa7XsZoh1dGMjPg7FnwjIZmeH6pJ&au
 
 ## Screenshots
 
-![App Screenshot]
-<p align="center"> <img src="static/screenshoots/1.png" width="350" title="hover text"></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/2.png" width="350" title="hover text"></p>
+<p align="center"> <img src="static/screenshoots/1.png" width="350" ></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/3.png" width="350" title="hover text"></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/4.png" width="350" title="hover text"></p>
+<p align="center"><img src="static/screenshoots/2.png" width="350" ></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/5.png" width="350" title="hover text"></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/6.png" width="350" title="hover text"></p>
+<p align="center"><img src="static/screenshoots/3.png" width="350" ></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/7.png" width="350" title="hover text"></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/8.png" width="350" title="hover text"></p>
+<p align="center"><img src="static/screenshoots/4.png" width="350" ></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/9.png" width="350" title="hover text"></p>
 
-![App Screenshot]
-<p align="center"><img src="static/screenshoots/10.png" width="350" title="hover text"></p>
+<p align="center"><img src="static/screenshoots/5.png" width="350" ></p>
+
+
+<p align="center"><img src="static/screenshoots/6.png" width="350" ></p>
+
+
+<p align="center"><img src="static/screenshoots/7.png" width="350" ></p>
+
+
+<p align="center"><img src="static/screenshoots/8.png" width="350" ></p>
+
+
+<p align="center"><img src="static/screenshoots/9.png" width="350" ></p>
+
+
+<p align="center"><img src="static/screenshoots/10.png" width="350" ></p>
 
 ## Logo
 <p align="center">
-  <img src="static/images/logo2.png" width="350" title="hover text">
+  <img src="static/images/logo2.png" width="350" >
 
 </p>
 
