@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--=========================== Icon Browser =================================-->
-    <link rel="shortcut icon" type="x-icon" href="./images/logo.png">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.png' %}">
     <!--=========================== font-awesome File ============================-->
     <link rel="stylesheet" href="{% static 'css/all.min.css'%}">
     <!--=========================== Bootstrap File ===============================-->
@@ -77,11 +77,11 @@
         
                         <div class="btn-box">
                             <button class="btn submit_btn" type="submit">حساب جديد</button>  
-                            <button class="google_btn" type="button" href="{% provider_login_url "google" %}">
+                            {% comment %} <button class="google_btn" type="button" href="{% provider_login_url "google" %}">
                                <a href="{% provider_login_url "google" %}">Continue Via Google</a>
                             
                                 <img src="{% static 'images/Google__G__Logo 1.png'%}">
-                            </button>
+                            </button> {% endcomment %}
                         </div>  
                       </form>
                 </div>

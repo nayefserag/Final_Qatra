@@ -32,9 +32,11 @@
                         {% csrf_token %}
                         <h3>مرحباً بك من جديد</h3>
                         <p>
-                             ليس لديك حساب ؟ 
+                             {% comment %} ليس لديك حساب ؟ 
                             <a href="{% url 'SignUp'%}">انشئ حساب جديد الان</a> </br>
-                            أو <a href="{% url 'home'%}">  استمر بدون حساب </a> 
+
+                            أو  {% endcomment %}
+                            <a href="{% url 'home'%}">  استمر بدون حساب </a> 
                         </p>
                         <div class="col-sm-12 user-box">
                             <label>أسم المستخدم</label>
@@ -58,9 +60,11 @@
                         <div class="btn-box">
                             <button class="btn submit_btn" type="submit">تسجيل الدخول</button>  
                             
-                            <button class="google_btn" type="submit"> 
-                                <a href="{% provider_login_url "google" %}">Continue Via Google</a>
-                                <img src="{% static 'images/Google__G__Logo 1.png'%}">
+                            {% comment %} <button class="google_btn" type="submit">  {% endcomment %}
+                                <button class="btn submit_btn" type="submit"> 
+                                {% comment %} <a href="{% provider_login_url "google" %}">Continue Via Google</a> {% endcomment %}
+                                <a href="{% url 'SignUp'%}">انشئ حساب جديد الان</a> </br>
+                                {% comment %} <img src="{% static 'images/Google__G__Logo 1.png'%}"> {% endcomment %}
                             </button>
                         </div>  
                     </form>
