@@ -112,7 +112,7 @@ This is Our [Notion](https://flash-punishment-560.notion.site/Graduation-Project
 
 - [@nayefserag](https://github.com/nayefserag) as a Back-End
 
-- [@Mariam M Elkassaby](https://github.com/MaryamElkassaby) as aFront-End
+- [@Mariam M Elkassaby](https://github.com/MaryamElkassaby) as a Front-End
 
 ## 🚀 About Me
 Hi there! My name is Nayef and I am a full-stack developer. I have a passion for creating web applications that are both functional and aesthetically pleasing.
