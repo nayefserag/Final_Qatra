@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-        'analytical',
-
     ##
 
 
@@ -207,9 +205,7 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
 
-ANALYTICAL_INTERNAL_IPS = ['127.0.0.1','https://qatra.cardigoo.com']
-ANALYTICAL_TRACKING_METHOD = 'ga'
-ANALYTICAL_TRACKING_CODE = 'G-GVY1D02FCZ'
+
 
 DATE_INPUT_FORMATS = [
     '%m-%d-%Y', # for example: 29-04-2023
