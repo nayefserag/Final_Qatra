@@ -114,6 +114,8 @@ This is Our [Notion](https://flash-punishment-560.notion.site/Graduation-Project
 
 - [@Mariam M Elkassaby](https://github.com/MaryamElkassaby) as a Front-End
 
+- Kareem Yasser as a UI/UX Designer
+
 ## 🚀 About Me
 Hi there! My name is Nayef and I am a full-stack developer. I have a passion for creating web applications that are both functional and aesthetically pleasing.
 
